@@ -1,0 +1,86 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+main {
+  display: block;
+}
+
+.general-topic button {
+  width: 100%;
+  padding: 1em;
+  text-align: left;
+}
+
+.login {
+  height: 40px;
+}
+
+.feature-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.searchbar {
+  width: 300px !important;
+}
+
+.searchbar:focus {
+  text-indent: 35px;
+}
+
+.search-icon {
+  visibility: hidden;
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  transform: translateY(-100%);
+}
+
+.search-icon img {
+  position: absolute;
+  transform: translate(-50%, -50%)
+}
+
+.searchbar:focus+.search-icon {
+  visibility: visible !important;
+}
+
+.icon-btn .btn {
+  border: none !important;
+}
+
+.icon-btn .tooltip {
+  position: absolute;
+  cursor: default;
+  transform: translateY(150%);
+  background-color: grey;
+  color: white;
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+.icon-btn .tooltip::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -1em;
+  border-width: 1em;
+  border-style: solid;
+  border-color: transparent transparent grey transparent;
+  transform: translateY(-200%);
+}
+
+.icon-btn .btn:hover~.tooltip {
+  opacity: 1;
+}
