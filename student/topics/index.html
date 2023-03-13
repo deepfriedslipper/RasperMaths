@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Rasper Maths</title>
+
+  <!--BOOTSTRAP ICONS-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+
+  <!--CSS-->
+  <link rel="stylesheet" type="text/css" href="/RasperMaths/style.css">
+
+  <!--BOOTSTRAP STYLES-->
+  <link href="/RasperMaths/css/main.min.css" rel="stylesheet">
+
+  <!--BOOTSTRAP SCRIPTS-->
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+    <header class="d-flex flex-wrap justify-content-between py-3 mb-4 border-bottom">
+      <div class="start nav">
+        <a href="/RasperMaths/"
+          class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+          <span class="fs-4">Rasper Maths</span>
+        </a>
+
+        <form class="px-4" role="search" wtx-context="A91D5B12-3821-4D3E-994B-418D4C31C61E">
+          <input type="search" class="form-control searchbar" placeholder="Search..." aria-label="Search"
+            wtx-context="A4B1769B-9402-4FE8-8B0F-6E1D5FAEFC36">
+          <button class="btn btn-light border-secondary border-opacity-25 search-icon">
+            <img src="/RasperMaths/assets/search.svg">
+          </button>
+        </form>
+      </div>
+
+      <div class="end">
+        <ul class="nav d-flex justify-content-between">
+          <a href="/RasperMaths/student/topics/" class="btn btn-danger">Choose lesson</a>
+          <div class="d-flex justify-content-center align-items-center ps-3 icon-btn">
+            <button class="btn">
+              <img height="20px" width="20px" src="/RasperMaths/assets/list-task.svg">
+            </button>
+            <div class="tooltip">Tasks</div>
+          </div>
+          <div class="d-flex justify-content-center align-items-center icon-btn">
+            <button class="btn">
+              <img height="20px" width="20px" src="/RasperMaths/assets/globe2.svg">
+            </button>
+            <div class="tooltip">Language</div>
+          </div>
+          <div class="d-flex justify-content-center align-items-center pe-2 icon-btn">
+            <button class="btn">
+              <img height="20px" width="20px" src="/RasperMaths/assets/bell-fill.svg">
+            </button>
+            <div class="tooltip">Notifications</div>
+          </div>
+          <div class="dropdown">
+            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <img src="https://github.com/mdo.png" alt="mdo" width="40" height="40" class="rounded-circle">
+              <span class="ps-2 username">Rafi</span>
+            </a>
+            <ul class="dropdown-menu text-small">
+              <li><a class="dropdown-item" href="#">New project...</a></li>
+              <li><a class="dropdown-item" href="#">Settings</a></li>
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Sign out</a></li>
+            </ul>
+          </div>
+        </ul>
+      </div>
+    </header>
+  </div>
+
+  <main>
+    <div class="container">
+      <section class="topics">
+        <h1>Topics</h1>
+        <div class="container-md">
+          <div class="row my-1 g-5 justify-content-around align-items-center">
+            <div class="accordion" id="general-topics">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="algebra-heading">
+                  <button class="accordion-button text-danger bg-light collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#algebra" aria-expanded="false"
+                    aria-controls="algebra">Algebra</button>
+                </h2>
+                <div class="accordion-collapse collapse" aria-labelledby="algebra-heading"
+                  data-bs-parent="#general-topics" id="algebra">
+                  <div class="accordion-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime suscipit sit vero laboriosam
+                      alias aliquid odit iusto quis eum deleniti, iste eligendi et tempore, corporis pariatur aliquam
+                      repellendus officiis? Vitae porro laborum repellat reprehenderit perferendis perspiciatis ducimus
+                      placeat saepe, dolorem harum quos qui dolore fuga omnis. Ex voluptatibus pariatur dolorum.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="geometry-heading">
+                  <button class="accordion-button text-danger bg-light collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#geometry" aria-expanded="false"
+                    aria-controls="geometry">Geometry</button>
+                </h2>
+                <div class="accordion-collapse collapse" aria-labelledby="geometry-heading"
+                  data-bs-parent="#general-topics" id="geometry">
+                  <div class="accordion-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime suscipit sit vero laboriosam
+                      alias aliquid odit iusto quis eum deleniti, iste eligendi et tempore, corporis pariatur aliquam
+                      repellendus officiis? Vitae porro laborum repellat reprehenderit perferendis perspiciatis ducimus
+                      placeat saepe, dolorem harum quos qui dolore fuga omnis. Ex voluptatibus pariatur dolorum.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="number-heading">
+                  <button class="accordion-button text-danger bg-light collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#number" aria-expanded="false"
+                    aria-controls="number">Number</button>
+                </h2>
+                <div class="accordion-collapse collapse" aria-labelledby="number-heading"
+                  data-bs-parent="#general-topics" id="number">
+                  <div class="accordion-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime suscipit sit vero laboriosam
+                      alias aliquid odit iusto quis eum deleniti, iste eligendi et tempore, corporis pariatur aliquam
+                      repellendus officiis? Vitae porro laborum repellat reprehenderit perferendis perspiciatis ducimus
+                      placeat saepe, dolorem harum quos qui dolore fuga omnis. Ex voluptatibus pariatur dolorum.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="ratio-heading">
+                  <button class="accordion-button text-danger bg-light collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#ratio" aria-expanded="false" aria-controls="ratio">Ratio,
+                    Scale and Proportion</button>
+                </h2>
+                <div class="accordion-collapse collapse" aria-labelledby="ratio-heading"
+                  data-bs-parent="#general-topics" id="ratio">
+                  <div class="accordion-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime suscipit sit vero laboriosam
+                      alias aliquid odit iusto quis eum deleniti, iste eligendi et tempore, corporis pariatur aliquam
+                      repellendus officiis? Vitae porro laborum repellat reprehenderit perferendis perspiciatis ducimus
+                      placeat saepe, dolorem harum quos qui dolore fuga omnis. Ex voluptatibus pariatur dolorum.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="probability-heading">
+                  <button class="accordion-button text-danger bg-light collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#probability" aria-expanded="false"
+                    aria-controls="probability">Probability and Statistics</button>
+                </h2>
+                <div class="accordion-collapse collapse" aria-labelledby="probability-heading"
+                  data-bs-parent="#general-topics" id="probability">
+                  <div class="accordion-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime suscipit sit vero laboriosam
+                      alias aliquid odit iusto quis eum deleniti, iste eligendi et tempore, corporis pariatur aliquam
+                      repellendus officiis? Vitae porro laborum repellat reprehenderit perferendis perspiciatis ducimus
+                      placeat saepe, dolorem harum quos qui dolore fuga omnis. Ex voluptatibus pariatur dolorum.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+</body>
+
+</html>
