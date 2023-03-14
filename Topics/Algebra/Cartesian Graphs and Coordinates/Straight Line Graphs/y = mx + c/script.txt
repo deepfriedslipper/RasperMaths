@@ -1,0 +1,5 @@
+Algebra > Cartesian Graphs and Coordinates > Straight Line Graphs
+
+Y = MX + C
+
+Hello, and welcome back to RasperMaths. In this video, we are going to be discussing the equation y = mx + c, which is part of the Straight Line Graphs topic.
