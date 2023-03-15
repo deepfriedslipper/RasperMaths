@@ -4,6 +4,11 @@ function onSignIn(googleUser) {
     console.log('Name: ' + profile.getName());
     console.log('Image URL: ' + profile.getImageUrl());
     console.log('Email: ' + profile.getEmail());
+    console.log("Profile")
+    console.log(profile)
+
+      // get user profile as an ID Token, or JWT Token
+      console.log(googleUser.getAuthResponse().id_token)
     $.ajax({
       type: 'POST',
       url: 'wherever we go next',
