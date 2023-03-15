@@ -15,10 +15,27 @@ main {
   display: block;
 }
 
-.general-topic button {
+.login-section {
+  width: 50%;
+  padding: 4rem;
+}
+
+.school {
   width: 100%;
+  padding: 0.5rem;
+  transition: margin-bottom 300ms ease-in-out;
+}
+
+.school:focus {
+  margin-bottom: 200px !important;
+}
+
+.topic-card {
+  background-color: rgb(255, 250, 250);
   padding: 1em;
-  text-align: left;
+  border: rgb(242, 212, 212) 1px solid;
+  border-radius: 1em;
+  flex-basis: 33%;
 }
 
 .login {
@@ -83,4 +100,16 @@ main {
 
 .icon-btn .btn:hover~.tooltip {
   opacity: 1;
+}
+
+.data {
+  display: none;
+}
+
+.g-signin2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
 }
