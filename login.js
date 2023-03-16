@@ -213,5 +213,5 @@ getData();
   function logout() {
   localStorage.removeItem("user_name");
   localStorage.removeItem("room_name");
-      window.location = "https://5ueofwcfld7zexxzotazog-on.drv.tw/twitterripoff.html";
+      window.location = "https://deepfriedslipper.github.io/RasperMaths/";
   }
