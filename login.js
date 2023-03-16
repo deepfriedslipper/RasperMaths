@@ -147,12 +147,23 @@ function login() {
   
     localStorage.setItem("user_name", user_name);
     
-      window.location = "";
    password = document.getElementById("password").value;
   
     localStorage.setItem("password", password);
-    
-      window.location = "";
+    for (let i = 0; i++) {
+if(user_name == teacheru[i]){
+	if(password == teacherp[i]){
+	window.location = "https://deepfriedslipper.github.io/RasperMaths/teacher/index.html"
+	}
+}else{
+  if(user_name == allowedu[i]){
+	  if(password == allowedp[i]){
+		        window.location = "https://deepfriedslipper.github.io/RasperMaths/student/index.html";
+
+	  }
+  }
+}
+}
   }
   
     firebase.initializeApp(firebaseConfig);
