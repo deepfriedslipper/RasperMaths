@@ -4,6 +4,8 @@ firebase init
 firebase deploy
 $ bower install firebaseui --save
 
+//hi jasper
+
 $ npm install firebaseui --save
 var firebase = require('firebase');
 var firebaseui = require('firebaseui');
