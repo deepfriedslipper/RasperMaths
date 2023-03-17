@@ -2,4 +2,32 @@ Algebra > Cartesian Graphs and Coordinates > Transformations
 
 ROTATION
 
-Hello, and welcome back to RasperMaths. In this video, we are going to be talking about Rotation, which is part of the Transformations topic.
+Hello, and welcome back to RasperMaths. I'm Mr Goddard and in this video, we are going to be talking about Rotation, which is part of the Transformations topic.
+
+Rotation is the process of turning a shape or an object around a fixed point, called the center of rotation. The resulting image is the rotated image of the original object.
+
+To rotate an object, you need to follow a few simple steps. First, mark the center of rotation on the object. Then, choose the degree of rotation. This could be 90, 180, or any other degree of your choice.
+
+Next, draw a line connecting the center of rotation and any point on the object. This line is known as the radius of rotation. Rotate the object along this radius for the chosen degree of rotation, in a clockwise or anticlockwise direction.
+
+Once you have rotated the object, draw the resulting image. The image should be the same distance away from the center of rotation as the original object, and should be the rotated image of the original object.
+
+Let's take a couple of examples to understand this concept better.
+
+Here's a shape that we need to rotate around the center of rotation. First, mark the center of rotation on the object. Then, choose the degree of rotation, let's say 90 degrees.
+
+Next, draw a line connecting the center of rotation and any point on the object. This line is the radius of rotation. Rotate the object along this radius for the chosen degree of rotation, in a clockwise or anticlockwise direction.
+
+Finally, draw the resulting image. The image should be the same distance away from the center of rotation as the original object, and should be the rotated image of the original object.
+
+Let's take another example.
+
+This time, we have to rotate a shape around the center of rotation. First, mark the center of rotation on the object. Then, choose the degree of rotation, let's say 180 degrees.
+
+Next, draw a line connecting the center of rotation and any point on the object. This line is the radius of rotation. Rotate the object along this radius for the chosen degree of rotation, in a clockwise or anticlockwise direction.
+
+Finally, draw the resulting image. The image should be the same distance away from the center of rotation as the original object, and should be the rotated image of the original object.
+
+Great job! You now know how to rotate objects around a fixed point. 
+
+Thanks for watching, and I'll see you in the next lesson.
