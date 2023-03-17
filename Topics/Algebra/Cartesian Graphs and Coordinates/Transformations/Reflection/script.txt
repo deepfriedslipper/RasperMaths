@@ -2,4 +2,25 @@ Algebra > Cartesian Graphs and Coordinates > Transformations
 
 REFLECTION
 
-Hello, and welcome back to RasperMaths. In this video, we are going to be discussing Reflection, which is part of the Transformations topic.
+Hello, and welcome back to RasperMaths. I'm Mr Goddard, and in this video, we are going to be discussing Reflection, which is part of the Transformations topic.
+
+Reflection is the process of flipping an object over a line, known as the mirror line or axis. The resulting image is the mirror image of the original object.
+To reflect an object over a line, you need to follow a few simple steps. Let's take a look at a couple of examples.
+
+Here's a shape that we need to reflect over the line. The line is called the mirror axis.
+
+First, draw the mirror line or axis. It could be a vertical or horizontal line, or any other line in between.
+Next, mark a few points on the object and their corresponding points on the other side of the mirror line.
+Finally, connect the corresponding points on either side of the mirror line and draw the reflected image.
+
+Let's take another example.
+
+This time, we have to reflect a shape over the line.
+
+Again, draw the mirror line or axis.
+Next, mark a few points on the object and their corresponding points on the other side of the mirror line.
+Finally, connect the corresponding points on either side of the mirror line and draw the reflected image.
+
+Great job! You now know how to reflect objects over a line or axis. 
+
+Thank you for watching, and I'll see you in the next video.
