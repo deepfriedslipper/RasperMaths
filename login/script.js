@@ -1,15 +1,18 @@
 const teacher = document.getElementById("teacher");
 const student = document.getElementById("student");
-
 const input = document.querySelector('.school');
 const auto_box = document.querySelector('.auto-complete-box');
 const school_wrapper = document.querySelector('school-wrapper');
+const section_2 = document.querySelector('.teacher-student');
+const section_3 = document.querySelector('.user-pass');
 
 const teacher_click = () => {
   student.classList.remove('btn-secondary');
   teacher.classList.remove('btn-light');
   student.classList.add('btn-light');
   teacher.classList.add('btn-secondary');
+
+  section_3.classList.remove('visually-hidden');
 }
 
 const student_click = () => {
@@ -17,7 +20,10 @@ const student_click = () => {
   teacher.classList.remove('btn-secondary');
   student.classList.add('btn-secondary');
   teacher.classList.add('btn-light');
+
+  section_3.classList.remove('visually-hidden');
 }
+
 
 auto_box.style.width = `${input.offsetWidth}px`;
 
@@ -37,6 +43,7 @@ let suggestions = [
 input.onkeyup = (e) => {
   let userData = e.target.value;
   let emptyArray = [];
+  section_2.classList.remove("visually-hidden");
   if (userData) {
     emptyArray = suggestions.filter((data) => {
       return data.toLocaleLowerCase().includes(userData.toLocaleLowerCase());
