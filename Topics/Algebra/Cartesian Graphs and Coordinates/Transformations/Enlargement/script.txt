@@ -4,4 +4,22 @@ ENLARGEMENT
 
 Hello, and welcome back to RasperMaths. I'm Mr Goddard and in this video, we are going to be discussing Enlargement, which is part of the Transformations topic.
 
-The first thing I'd like you to understand is that there are 2 factors that we need to calculate to enlarge a shape. The Scale Factor, and the Centre of Enlargement. The center of enlargement is where the shape will enlarge from. This is what a centre of enlargement looks like in the corner, and in the center.
+The first thing I'd like you to understand is that there are 2 factors that we need to calculate to enlarge a shape; the Scale Factor, and the Centre of Enlargement.
+
+The center of enlargement is where the shape will enlarge from. This is what a centre of enlargement looks like in the corner, and in the center.
+
+The scale factor is fairly self-explanatory; this is how much you are enlarging the shape by. A scale factor of 2 looks like this. All the sides have doubled in length. Essentially, you multiply the lengths of all the sides by the scale factor to get the new side lengths.
+
+Let's have a look at some example problems and solve them together.
+
+What is the scale factor of this enlargement if it began with sides of 2 cm and ended with sides of 14cm?
+
+We can write this as an equation: 2 times x is 14. We can then rearrange this equation to give us 14 divided by 2 is x.
+14 divided by 2 we know is 7, thus the scale factor in this example is 7.
+
+If this shape is enlarged with a scale factor of 4, what is its final area?
+
+First of all, we multiply all of the side lengths by the scale factor which is 4.
+
+Then we can calculate the area, which we know to be base times by height divided by 2. If we rotate the shape we can see we have a right angle here which means we can use this as the base and this as the height.
+6 times 8 is 48, which we can divide by 2 to get 24 cm squared.
