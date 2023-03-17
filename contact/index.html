@@ -17,6 +17,9 @@
 
   <!-- BOOTSTRAP SCRIPTS -->
   <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <!-- EMAIL JS -->
+  <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
 </head>
 
 <body>
@@ -33,7 +36,7 @@
         <li class="nav-item"><a href="#" class="nav-link link-danger">FAQ</a></li>
         <li class="nav-item"><a href="/RasperMaths/contact.html" class="nav-link text-bg-danger"
             aria-current="page">Contact us</a></li>
-        <a href="/RasperMaths/login.html" type="button" class="btn btn-outline-danger mx-2 login">Login</a>
+        <a href="/RasperMaths/login.html" type="button" class="btn btn-outli  ne-danger mx-2 login">Login</a>
         <button type="button" class="btn btn-danger login">Register interest</button>
       </ul>
     </header>
@@ -41,9 +44,13 @@
   <main>
     <div class="container">
       <h1 class="pb-3">Contact our team</h1>
-      <p>Write your feedback here:</p>
-      <input type="text" class="w-100 mb-3 p-1">
-      <input type="submit" class="mb-5 btn btn-danger">
+      <p class="required">Name:</p>
+      <input type="text" class="mb-3 p-1" id="name">
+      <p class="required">Email:</p>
+      <input type="email" class="mb-3 p-1" id="email">
+      <p class="required">Write your feedback here:</p>
+      <input type="text" class="w-100 mb-3 p-1" id="message">
+      <input type="submit" class="mb-5 btn btn-danger" onclick="sendFeedback();">
 
       <p>Alternatively, email us at one of the addresses below:</p>
       <div class="mb-3">
@@ -57,6 +64,8 @@
     </div>
 
   </main>
+
+  <script src="/RasperMaths/contact/email.js"></script>
 </body>
 
 </html>
