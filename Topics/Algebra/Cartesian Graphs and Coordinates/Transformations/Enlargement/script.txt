@@ -2,4 +2,6 @@ Algebra > Cartesian Graphs and Coordinates > Transformations
 
 ENLARGEMENT
 
-Hello, and welcome back to RasperMaths. In this video, we are going to be discussing Enlargement, which is part of the Transformations topic.
+Hello, and welcome back to RasperMaths. I'm Mr Goddard and in this video, we are going to be discussing Enlargement, which is part of the Transformations topic.
+
+The first thing I'd like you to understand is that there are 2 factors that we need to calculate to enlarge a shape. The Scale Factor, and the Centre of Enlargement. The center of enlargement is where the shape will enlarge from. This is what a centre of enlargement looks like in the corner, and in the center.
