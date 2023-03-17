@@ -23,3 +23,5 @@ First of all, we multiply all of the side lengths by the scale factor which is 4
 
 Then we can calculate the area, which we know to be base times by height divided by 2. If we rotate the shape we can see we have a right angle here which means we can use this as the base and this as the height.
 6 times 8 is 48, which we can divide by 2 to get 24 cm squared.
+
+Thank you for watching, and I'll see you in the next video.
