@@ -2,4 +2,32 @@ Algebra > Cartesian Graphs and Coordinates > Transformations
 
 TRANSLATION
 
-Hello, and welcome back to Rasper Maths. In this video we're going to be talking about Translation, which is part of the Transformations topic.
+Hello, and welcome back to Rasper Maths. I'm Mr Goddard and in this video we're going to be talking about Translation, which is part of the Transformations topic.
+
+Welcome to this educational animation on translation in math. Translation is an important concept in geometry and is used in many real-world applications.
+
+Translation is the process of moving a shape or an object from one place to another in a straight line, without changing its size, shape, or orientation.
+
+To translate an object, you need to follow a few simple steps. First, choose a distance and a direction. This will determine how far and in which direction you need to move the object.
+
+Next, draw a vector arrow starting from the original position of the object and pointing towards its new position. The length and direction of the vector arrow should correspond to the chosen distance and direction.
+
+Finally, move the object along the vector arrow to its new position. The resulting image should be the same size, shape, and orientation as the original object, but in a new position.
+
+Let's take a couple of examples to understand this concept better.
+
+Here's a shape that we need to translate. First, choose a distance and a direction. Let's say we want to move the object two units to the right.
+
+Next, draw a vector arrow starting from the original position of the object and pointing towards its new position. The length and direction of the vector arrow should correspond to the chosen distance and direction.
+
+Finally, move the object along the vector arrow to its new position. The resulting image should be the same size, shape, and orientation as the original object, but in a new position.
+
+Let's take another example.
+
+This time, we have to translate a shape. First, choose a distance and a direction. Let's say we want to move the object three units up and four units to the left.
+
+Next, draw a vector arrow starting from the original position of the object and pointing towards its new position. The length and direction of the vector arrow should correspond to the chosen distance and direction.
+
+Finally, move the object along the vector arrow to its new position. The resulting image should be the same size, shape, and orientation as the original object, but in a new position.
+
+Great job! You now know how to translate objects in math. Thanks for watching, and I'll see you in the next lesson.
