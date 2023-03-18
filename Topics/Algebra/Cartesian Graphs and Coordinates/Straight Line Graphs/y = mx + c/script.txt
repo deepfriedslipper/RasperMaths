@@ -2,4 +2,28 @@ Algebra > Cartesian Graphs and Coordinates > Straight Line Graphs
 
 Y = MX + C
 
-Hello, and welcome back to RasperMaths. In this video, we are going to be discussing the equation y = mx + c, which is part of the Straight Line Graphs topic.
+Hello, and welcome back to RasperMaths. I'm Mr. Amelines, and in this video, we are going to be discussing the equation y=mx+c, which is part of the Straight Line Graphs topic.
+
+Straight line graphs are used in many real-world situations to represent relationships between two variables. The equation y=mx+c is used to represent these graphs.
+
+In this equation, 'y' represents the vertical axis, and 'x' represents the horizontal axis. 'm' represents the gradient or slope of the line, and 'c' represents the y-intercept, which is the point where the line crosses the y-axis.
+
+To plot a straight line graph using this equation, you need to first find the y-intercept, which is the point where the line crosses the y-axis. This is represented by the value of 'c' in the equation.
+
+Next, find the gradient or slope of the line, represented by 'm' in the equation. This is the change in y over the change in x, or the rise over run.
+
+Once you have the y-intercept and the gradient, you can plot points on the graph and join them with a straight line. This line represents the relationship between the two variables.
+
+Let's take a couple of examples to understand this concept better.
+
+Suppose we have the equation y=3x+2. Here, the y-intercept is 2, and the gradient is 3. We can plot the y-intercept at the point (0,2) and then use the gradient to plot more points on the graph.
+
+The gradient tells us that for every increase of one unit in the horizontal axis (x), the vertical axis (y) increases by three units. We can plot another point at (1,5) and join the two points with a straight line to get the graph of the equation y=3x+2.
+
+Let's take another example.
+
+Suppose we have the equation y=-2x+4. Here, the y-intercept is 4, and the gradient is -2. We can plot the y-intercept at the point (0,4) and then use the gradient to plot more points on the graph.
+
+The gradient tells us that for every increase of one unit in the horizontal axis (x), the vertical axis (y) decreases by two units. We can plot another point at (1,2) and join the two points with a straight line to get the graph of the equation y=-2x+4.
+
+Great job! You now know how to plot straight line graphs using the equation y=mx+c. Thanks for watching, and I'll see you in the next lesson.
