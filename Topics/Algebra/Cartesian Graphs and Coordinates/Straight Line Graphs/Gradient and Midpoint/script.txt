@@ -2,4 +2,25 @@ Algebra > Cartesian Graphs and Coordinates > Straight Line Graphs
 
 GRADIENT AND MIDPOINT
 
-Hello, and welcome back to RasperMaths. I'm Mr Goddard and today we're going to be discussing how to find the gradient and midpoint of a line between two points.
+Hello, and welcome back to RasperMaths. I'm Mr Amelines and today we're going to be discussing how to find the gradient and midpoint of a line between two points.
+
+As we discussed in our last video, the gradient of a line is the slope or steepness of the line. It tells us how much the y-value changes for every one unit change in the x-value. To find the gradient, we need to use the formula gradient = change in Y / change in X.
+
+The midpoint is essentially the center of the line. To find it, we need to use the formula: midpoint = [(x₁ + x₂) / 2, (y₁ + y₂) / 2]
+
+Now, let's take an example. Suppose we have a line passing through two points, A (2, 5) and B (6, 11). To find the gradient of the line, we use the formula and subsitute our values in:
+
+gradient = (11 - 5) / (6 - 2)
+gradient = 6 / 4
+gradient = 1.5
+
+So the gradient of the line passing through points A and B is 1.5.
+
+To find the midpoint of the line, we use the formula:
+
+midpoint = [(2 + 6) / 2, (5 + 11) / 2]
+midpoint = [4, 8]
+
+Therefore, the midpoint of the line passing through points A and B is (4, 8).
+
+Congratulations! You now know how to find the gradient and midpoint of a line. Thanks for watching, and I'll see you in the next lesson.
