@@ -8,6 +8,17 @@
   --danger: #dc3545;
 }
 
+@font-face {
+  font-family: "Bungee";
+  src: url("/RasperMaths/assets/Bungee/Bungee-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("/RasperMaths/assets/raleway/Raleway-Medium.woff") format("woff");
+}
+
+
 body,
 html {
   margin: 0;
@@ -17,6 +28,12 @@ html {
 
 main {
   display: block;
+}
+
+.logo {
+  margin: -20px;
+  margin-left: auto;
+  transform: translateY(12%);
 }
 
 input[type="text"]:focus {
@@ -39,6 +56,33 @@ input[type="text"]:focus {
 .login-section {
   width: 50%;
   padding: 4rem;
+}
+
+.lesson-container {
+  position: relative;
+}
+
+.lesson-container .subtopic {
+  order: 0;
+  position: relative;
+  transition: width 0.8s ease-in-out, order 0.8s ease-in-out;
+}
+
+.lesson-container .subtopic button,
+.lesson-container .subtopic .video-frame iframe {
+  display: none;
+}
+
+.subtopic.active {
+  width: calc(100% - 1.75rem) !important;
+  aspect-ratio: 8/5;
+  margin: 5px;
+  order: -1;
+}
+
+.subtopic.active button,
+.subtopic.active .video-frame iframe {
+  display: inline-block;
 }
 
 .school {
