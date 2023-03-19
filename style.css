@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --danger: #dc3545;
+}
+
 body,
 html {
   margin: 0;
@@ -15,6 +19,23 @@ main {
   display: block;
 }
 
+input[type="text"]:focus {
+  outline: var(--danger) 1px solid !important;
+}
+
+.required::after {
+  content: ' *';
+  color: red;
+}
+
+.no-drag {
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
 .login-section {
   width: 50%;
   padding: 4rem;
@@ -22,12 +43,54 @@ main {
 
 .school {
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 8px;
   transition: margin-bottom 300ms ease-in-out;
 }
 
 .school:focus {
   margin-bottom: 200px !important;
+}
+
+.auto-complete-box {
+  position: absolute;
+  background: white;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  max-height: 0px;
+  overflow-y: scroll;
+  pointer-events: none;
+  transition: max-height 300ms ease-in-out, transform 300ms ease-in-out;
+  transform: translateY(15px);
+}
+
+.school:focus+.auto-complete-box {
+  max-height: 180px;
+  pointer-events: all;
+  padding: 0.5rem;
+  transform: translateY(-190px);
+}
+
+.school:focus+.auto-complete-box>li {
+  display: block;
+}
+
+.auto-complete-box li {
+  list-style: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  display: none;
+}
+
+.auto-complete-box li:hover {
+  background-color: #dc3545;
+  cursor: pointer;
+  color: white;
+}
+
+.not-listed:hover {
+  background: none !important;
+  color: black !important;
 }
 
 .topic-card {
@@ -102,14 +165,23 @@ main {
   opacity: 1;
 }
 
-.data {
-  display: none;
+@media only screen and (min-width: 576px) {
+  .subtopic {
+    margin: 0.5rem;
+    width: calc(100% - 1rem) !important;
+  }
 }
 
-.g-signin2 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -50px;
-  margin-left: -50px;
+@media only screen and (min-width: 768px) {
+  .subtopic {
+    margin: 0.5rem;
+    width: calc(50% - 1rem) !important;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .subtopic {
+    margin: 0.5rem;
+    width: calc(33% - 1rem) !important;
+  }
 }
