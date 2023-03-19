@@ -1,43 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 506.54 278">
-  <defs>
-    <style>
-      .cls-1 {
-        font-family: Raleway-SemiBold, Raleway;
-        font-size: 112.95px;
-        font-weight: 600;
-      }
-
-      .cls-1, .cls-2 {
-        fill: #ed1c24;
-      }
-
-      .cls-3 {
-        letter-spacing: -.07em;
-      }
-
-      .cls-2 {
-        font-family: Bungee-Regular, Bungee;
-        font-size: 89.7px;
-      }
-
-      .cls-4 {
-        stroke-width: 9px;
-      }
-
-      .cls-4, .cls-5 {
-        fill: none;
-        stroke: #231f20;
-        stroke-miterlimit: 10;
-      }
-
-      .cls-5 {
-        stroke-width: 12px;
-      }
-    </style>
-  </defs>
-  <text class="cls-2" transform="translate(129.62 119.01)"><tspan x="0" y="0">RASPER</tspan></text>
-  <text class="cls-1" transform="translate(126.5 239.73) scale(.97 1)"><tspan x="0" y="0">M</tspan><tspan class="cls-3" x="98.26" y="0">A</tspan><tspan x="166.93" y="0">THS</tspan></text>
-  <line class="cls-4" x1="133.94" y1="140.73" x2="499.19" y2="141.98"/>
-  <polyline class="cls-5" points="5.19 166.79 60.58 261.98 121.14 6 502.93 6"/>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1195.72 313.8" width="190px">
+  <text transform="translate(139.68 183.76)" style="fill: #ed1c24; font-family: Bungee; font-size: 142.12px;">
+    <tspan x="0" y="0">RASPER</tspan>
+  </text>
+  <text transform="translate(744.06 179.18)" style="font-family: Raleway; font-size: 129.65px; font-weight: 600;"><tspan x="0" y="0">M</tspan><tspan x="112.79" y="0" style="letter-spacing: -.07em;">A</tspan><tspan x="191.62" y="0">THS</tspan></text>
+  <polyline points="5.32 124.55 67.25 243.11 109.72 6 1195.72 6" style="fill: none; stroke: #231f20; stroke-miterlimit: 10; stroke-width: 12px;"/>
 </svg>
