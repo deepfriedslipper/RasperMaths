@@ -8,17 +8,6 @@
   --danger: #dc3545;
 }
 
-@font-face {
-  font-family: "Bungee";
-  src: url("/RasperMaths/assets/Bungee/Bungee-Regular.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Raleway";
-  src: url("/RasperMaths/assets/raleway/Raleway-Medium.woff") format("woff");
-}
-
-
 body,
 html {
   margin: 0;
@@ -33,7 +22,7 @@ main {
 .logo {
   margin: -20px;
   margin-left: auto;
-  transform: translateY(12%);
+  transform: translateY(8%);
 }
 
 input[type="text"]:focus {
@@ -127,7 +116,7 @@ input[type="text"]:focus {
 }
 
 .auto-complete-box li:hover {
-  background-color: #dc3545;
+  background-color: var(--danger);
   cursor: pointer;
   color: white;
 }
