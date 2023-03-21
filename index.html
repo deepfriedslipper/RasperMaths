@@ -17,21 +17,24 @@
 
   <!-- BOOTSTRAP SCRIPTS -->
   <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <!-- EMAIL JS -->
+  <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
 </head>
 
 <body>
   <div class="container">
-    <header class="d-flex flex-wrap justify-content-between py-3 mb-4 border-bottom">
-      <a href="/RasperMaths/" class="d-flex align-items-center me-md-auto p-0">
+    <header class="d-flex flex-wrap justify-content-between py-3 mb-4 border-bottom" id="home">
+      <a href=" /RasperMaths/" class="d-flex align-items-center me-md-auto p-0">
         <img src="/RasperMaths/assets/logo.svg" class="logo">
       </a>
 
       <ul class="nav nav-pills">
         <li class="nav-item"><a href="/RasperMaths/" class="nav-link text-bg-danger" aria-current="page">Home</a></li>
-        <li class="nav-item"><a href="#features" class="nav-link link-danger">Features</a></li>
-        <li class="nav-item"><a href="#pricing" class="nav-link link-danger">Pricing</a></li>
-        <li class="nav-item"><a href="#" class="nav-link link-danger">FAQ</a></li>
-        <li class="nav-item"><a href="/RasperMaths/contact" class="nav-link link-danger">Contact us</a></li>
+        <li class="nav-item"><a href="#features" class="nav-link link-danger features">Features</a></li>
+        <li class="nav-item"><a href="#pricing" class="nav-link link-danger pricing">Pricing</a></li>
+        <li class="nav-item"><a href="#faq" class="nav-link link-danger faq">FAQ</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link link-danger contact">Contact us</a></li>
         <a href="/RasperMaths/login/" type="button" class="btn btn-outline-danger mx-2 login">Login</a>
         <button type="button" class="btn btn-danger login">Register interest</button>
       </ul>
@@ -111,66 +114,81 @@
           </div>
         </div>
       </div>
-          <div class="container px-4 py-5" id="pricing">
-      <h2 class="pb-2 border-bottom">Pricing</h2>
 
-      <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
-        <div class="col d-flex flex-column align-items-start gap-2">
-          <h3 class="fw-bold">Keeping students happy to learn</h3>
-          <p class="text-muted">
-            Our affordable, AI-powered learning site has a multitude of features to help students
-            of all capabilities with their learning,
-            whilst making it enjoyable.</p>
-          <a href="#" class="btn btn-danger btn-lg">Learn more</a>
-        </div>
-
-        <div class="col">
-          <div class="row row-cols-1 row-cols-sm-2 g-4">
-            <div class="col d-flex flex-column gap-2">
-              <div
-                class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-danger bg-gradient fs-4 rounded-3 feature-icon">
-                <img width="40px" src="/RasperMaths/assets/camera-video.svg">
-              </div>
-              <h4 class="fw-semibold mb-0">High-quality videos</h4>
-              <p class="text-muted">Fantastic educational animations that explain the concept clearly and concisely.</p>
-            </div>
-
-            <div class="col d-flex flex-column gap-2">
-              <div
-                class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-danger bg-gradient fs-4 rounded-3 feature-icon">
-                <img width="40px" src="/RasperMaths/assets/robot.svg">
-              </div>
-              <h4 class="fw-semibold mb-0">AI-powered</h4>
-              <p class="text-muted">Our 'Helpbot' is powered by GPT-4, one of the most powerful AI language models
-                presently.</p>
-            </div>
-
-            <div class="col d-flex flex-column gap-2">
-              <div
-                class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-danger bg-gradient fs-4 rounded-3 feature-icon">
-                <img width="40px" src="/RasperMaths/assets/controller.svg">
-              </div>
-              <h4 class="fw-semibold mb-0">Enjoyable</h4>
-              <p class="text-muted">The site has a game-like feel to it so students can have fun while still learning.
-              </p>
-            </div>
-
-            <div class="col d-flex flex-column gap-2">
-              <div
-                class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-danger bg-gradient fs-4 rounded-3 feature-icon">
-                <img width="40px" src="/RasperMaths/assets/file-earmark-person.svg">
-              </div>
-              <h4 class="fw-semibold mb-0">Personalisation</h4>
-              <p class="text-muted">Students can personalise the site to reflect their mathematical capability.</p>
-            </div>
+      <div class="mb-5" id="pricing">
+        <h2 class="pb-2 border-bottom mb-5">Pricing</h2>
+        <div class="row">
+          <div class="col-6">
+            <h1 class="card-title pricing-card-title p-2">
+              £9.99<small class="text-muted fw-light">/mo</small>
+            </h1>
+            <ul>
+              <li>90-day free trial</li>
+              <li>Cancel any time</li>
+              <li>Subscribe for your entire school</li>
+            </ul>
+          </div>
+          <div class="col-6 bg-light p-4">
+            We have tried to make this service as affordable as we possibly can. Due to our company simply being a small
+            team of
+            friends, we do not need to pay our employees. There are several other costs involved in making a platform
+            like this, though, such as the GPT-3.5 API that powers our 'Helpbot', website hosting and domain name. In
+            order to actually make a profit, we have included non-obtrusive adverts, which allow us to keep this price
+            tag as low as we possibly can.
           </div>
         </div>
       </div>
-    </div>
 
+      <div id="faq">
+        <h2 class="pb-2 border-bottom mb-5">FAQs</h2>
+      </div>
 
+      <div id="contact" class="mb-5">
+        <h2 class="pb-2 border-bottom">Contact us</h2>
+        <p class="required">Name:</p>
+        <input type="text" class="mb-3 p-1" id="name">
+        <p class="required">Email:</p>
+        <input type="email" class="mb-3 p-1" id="email">
+        <p class="required">Write your feedback here:</p>
+        <input type="text" class="w-100 mb-3 p-1" id="message">
+        <input type="submit" class="mb-5 btn btn-danger" onclick="sendFeedback();">
+
+        <p>Alternatively, email us at one of the addresses below:</p>
+        <div class="mb-3">
+          <img src="/RasperMaths/assets/envelope.svg" class="pe-2 no-drag">
+          raspermaths@gmail.com
+        </div>
+        <div>
+          <img src="/RasperMaths/assets/envelope.svg" class="pe-2 no-drag">
+          smellysox1business@gmail.com
+        </div>
+      </div>
+
+      <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <p class="col-md-4 mb-0 text-muted">© 2023 Rasper Maths, Inc</p>
+
+          <a href="/RasperMaths/"
+            class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+            <img src="/RasperMaths/assets/logo.svg">
+          </a>
+
+          <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item"><a href="#home" class="nav-link px-2 text-muted">Home</a></li>
+            <li class="nav-item"><a href="#features" class="nav-link px-2 text-muted">Features</a></li>
+            <li class="nav-item"><a href="#pricing" class="nav-link px-2 text-muted">Pricing</a></li>
+            <li class="nav-item"><a href="#faq" class="nav-link px-2 text-muted">FAQ</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link px-2 text-muted">Contact us</a></li>
+          </ul>
+        </footer>
+      </div>
   </main>
+  </div>
+
+
+  </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="email.js"></script>
 
 </body>
 
