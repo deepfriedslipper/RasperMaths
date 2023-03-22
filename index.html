@@ -25,18 +25,40 @@
 <body>
   <div class="container">
     <header class="d-flex flex-wrap justify-content-between py-3 mb-4 border-bottom" id="home">
-      <a href=" /RasperMaths/" class="d-flex align-items-center me-md-auto p-0">
+      <a href="/RasperMaths/" class="d-flex align-items-center me-md-auto p-0">
         <img src="/RasperMaths/assets/logo.svg" class="logo">
       </a>
 
       <ul class="nav nav-pills">
-        <li class="nav-item"><a href="/RasperMaths/" class="nav-link text-bg-danger" aria-current="page">Home</a></li>
-        <li class="nav-item"><a href="#features" class="nav-link link-danger features">Features</a></li>
-        <li class="nav-item"><a href="#pricing" class="nav-link link-danger pricing">Pricing</a></li>
-        <li class="nav-item"><a href="#faq" class="nav-link link-danger faq">FAQ</a></li>
+        <li class="nav-item">
+          <a href="/RasperMaths/" class="nav-link text-bg-danger" aria-current="page">
+            Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#features" class="nav-link link-danger features">
+            Features
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#pricing" class="nav-link link-danger pricing">
+            Pricing
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#faq" class="nav-link link-danger faq">FAQ</a>
+        </li>
         <li class="nav-item"><a href="#contact" class="nav-link link-danger contact">Contact us</a></li>
-        <a href="/RasperMaths/login/" type="button" class="btn btn-outline-danger mx-2 login">Login</a>
-        <button type="button" class="btn btn-danger login">Register interest</button>
+        <a href="/RasperMaths/login/" type="button" class="btn btn-outline-danger mx-2 login">
+          Login
+        </a>
+        <a type="button" class="btn btn-danger login" href="#">
+          Register interest
+        </a>
+        <button type="button" class="btn py-0 px-2 ms-1 d-flex align-items-center justify-content-center sidebar-toggle"
+          style="background-color: rgb(221, 221, 221);" onclick="toggle_menu();">
+          <img src="/RasperMaths/assets/list.svg">
+        </button>
       </ul>
     </header>
   </div>
@@ -185,10 +207,79 @@
   </main>
   </div>
 
-
+  <div class="d-flex flex-column flex-shrink-0 p-3 bg-light sidebar" style="width: 280px;">
+    <div class="d-flex align-items-center link-dark text-decoration-none">
+      <button onclick="toggle_menu();" class="btn d-flex justify-content-center"
+        style="background-color: rgb(221, 221, 221);aspect-ratio: 1/1 !important;padding: 0.45rem;margin-right: 0.5rem;">
+        <img src="/RasperMaths/assets/x-lg.svg">
+      </button>
+      <img src="/RasperMaths/assets/logo.svg">
+    </div>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li>
+        <a href="#" class="nav-link active" aria-current="page">
+          <svg class="bi pe-none me-2" width="16" height="16">
+            <use xlink:href="#home"></use>
+          </svg>
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link link-dark">
+          <svg class="bi pe-none me-2" width="16" height="16">
+            <use xlink:href="#speedometer2"></use>
+          </svg>
+          Features
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link link-dark">
+          <svg class="bi pe-none me-2" width="16" height="16">
+            <use xlink:href="#table"></use>
+          </svg>
+          Pricing
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link link-dark">
+          <svg class="bi pe-none me-2" width="16" height="16">
+            <use xlink:href="#grid"></use>
+          </svg>
+          FAQ
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link link-dark">
+          <svg class="bi pe-none me-2" width="16" height="16">
+            <use xlink:href="#people-circle"></use>
+          </svg>
+          Contact us
+        </a>
+      </li>
+    </ul>
+    <hr>
+    <div class="dropdown">
+      <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
+        data-bs-toggle="dropdown" aria-expanded="false">
+        <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+        <strong>mdo</strong>
+      </a>
+      <ul class="dropdown-menu text-small shadow">
+        <li><a class="dropdown-item" href="#">New project...</a></li>
+        <li><a class="dropdown-item" href="#">Settings</a></li>
+        <li><a class="dropdown-item" href="#">Profile</a></li>
+        <li>
+          <hr class="dropdown-divider">
+        </li>
+        <li><a class="dropdown-item" href="#">Sign out</a></li>
+      </ul>
+    </div>
   </div>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script src="email.js"></script>
+  <script src="sidebar.js"></script>
 
 </body>
 
