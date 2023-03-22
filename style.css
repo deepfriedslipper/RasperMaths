@@ -13,10 +13,24 @@ html {
   margin: 0;
   padding: 0;
   display: block;
+  overflow-x: hidden;
 }
 
 main {
   display: block;
+}
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -280px;
+  text-align: right;
+  transition: 500ms right ease-in-out;
+}
+
+.sidebar.active {
+  right: 0;
 }
 
 .logo {
@@ -198,23 +212,43 @@ input[type="text"]:focus {
   opacity: 1;
 }
 
+/* Small */
+
 @media only screen and (min-width: 576px) {
   .subtopic {
     margin: 0.5rem;
     width: calc(100% - 1rem) !important;
   }
+
+  .nav-item,
+  .login {
+    display: none !important;
+  }
 }
+
+/* Medium */
 
 @media only screen and (min-width: 768px) {
   .subtopic {
     margin: 0.5rem;
     width: calc(50% - 1rem) !important;
   }
+
+  .login {
+    display: inline-block !important;
+  }
 }
+
+/* Large */
 
 @media only screen and (min-width: 992px) {
   .subtopic {
     margin: 0.5rem;
     width: calc(33% - 1rem) !important;
+  }
+
+  .nav-item,
+  .login {
+    display: inline-block !important;
   }
 }
