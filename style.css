@@ -148,10 +148,6 @@ input[type="text"]:focus {
   flex-basis: 33%;
 }
 
-.login {
-  height: 40px;
-}
-
 .feature-icon {
   width: 50px;
   height: 50px;
@@ -235,7 +231,7 @@ input[type="text"]:focus {
   }
 
   .login {
-    display: inline-block !important;
+    display: inline-flex !important;
   }
 }
 
@@ -249,6 +245,6 @@ input[type="text"]:focus {
 
   .nav-item,
   .login {
-    display: inline-block !important;
+    display: inline-flex !important;
   }
 }
