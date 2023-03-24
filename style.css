@@ -32,6 +32,7 @@ main {
   right: 0;
 }
 */
+
 .logo {
   margin: -20px;
   margin-left: auto;
@@ -245,5 +246,9 @@ input[type="text"]:focus {
   .nav-item,
   .login {
     display: inline-flex !important;
+  }
+  
+  .sidebar-toggle {
+    display: none !important;
   }
 }
