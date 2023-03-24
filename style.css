@@ -21,10 +21,8 @@ main {
 }
 
 .sidebar {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: -280px;
+  position: sticky;
+  right: 0px;
   text-align: right;
   transition: 500ms right ease-in-out;
 }
