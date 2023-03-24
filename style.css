@@ -23,6 +23,7 @@ main {
 .sidebar {
   position: sticky;
   right: 0;
+  height: 100vh;
   text-align: right;
   /*transition: 500ms right ease-in-out;*/
 }
