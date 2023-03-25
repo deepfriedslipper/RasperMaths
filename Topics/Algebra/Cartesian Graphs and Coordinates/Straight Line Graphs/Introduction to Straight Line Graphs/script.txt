@@ -3,3 +3,17 @@ Algebra > Cartesian Graphs and Coordinates > Straight Line Graphs
 INTRODUCTION TO STRAIGHT LINE GRAPHS
 
 Hello and welcome back to Rasper Maths. I'm Mr Amelines and in this video, we're going to be discussing Straight Line Graphs.
+
+A straight line graph is a graph where all the points lie on a straight line. We use straight line graphs to represent data, relationships between variables, and many other things.
+
+We can represent a straight line graph using an equation. This equation is true for every single point along the line.
+
+For instance, let's use the equation x = 5. The line will look like this when plotted and, as you can see, every point on this line has an x value of 5. This line is essentially a collection of points and this collection includes every point that has an x value of 5.
+
+Let's look at another example.
+
+The equation y = x looks like this. As you can see, every point that has the same x and y values will be a part of this line. If we were given this equation and asked to plot the graph, you could do this by finding 2 values where this equation is true and simply continuing the line. For example, we can plot the points (-3, -3) and (5, 5). Then, from this we can draw a straight line with a ruler. If we take a look, we can see that every point along this line has the same x and y value.
+
+Here are a few more examples, feel free to pause the video to take a look.
+
+Let's have a go at some practice questions now.
