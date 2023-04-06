@@ -26,29 +26,28 @@
   <div class="container">
     <header class="d-flex flex-wrap justify-content-between py-3 mb-4 border-bottom">
       <div class="start nav">
-        <a href="/RasperMaths/student/" class="d-flex align-items-center me-md-auto p-0">
-          <img src="/RasperMaths/assets/logo.svg" class="logo">
+        <a href="/RasperMaths/student/" class="d-flex align-items-center">
+          <img src="/RasperMaths/assets/logo.svg" class="logo d-none d-lg-block">
+          <img src="/RasperMaths/assets/small_logo.svg" class="logo d-block d-lg-none" alt="RasperMaths Logo">
         </a>
 
-        <form class="px-4" role="search" wtx-context="A91D5B12-3821-4D3E-994B-418D4C31C61E">
+        <form class="ps-3 me-2" role="search" wtx-context="A91D5B12-3821-4D3E-994B-418D4C31C61E">
           <input type="search" class="form-control searchbar" placeholder="Search..." aria-label="Search"
             wtx-context="A4B1769B-9402-4FE8-8B0F-6E1D5FAEFC36">
           <button class="btn btn-light border-secondary border-opacity-25 search-icon">
             <img src="/RasperMaths/assets/search.svg">
           </button>
         </form>
+        <ul class="nav list d-flex align-items-center">
+          <a href="#" class="text-decoration-none text-muted mx-2 nav-element">Lessons</a>
+          <a href="#" class="text-decoration-none text-muted mx-2 nav-element">Tasks</a>
+          <a href="#" class="text-decoration-none text-muted mx-2 nav-element">Revision</a>
+        </ul>
       </div>
 
       <div class="end">
         <ul class="nav d-flex justify-content-between">
-          <a href="/RasperMaths/student/topics/" class="btn btn-danger">Choose lesson</a>
-          <div class="d-flex justify-content-center align-items-center ps-3 icon-btn">
-            <button class="btn">
-              <img height="20px" width="20px" src="/RasperMaths/assets/list-task.svg" alt="List icon">
-            </button>
-            <div class="tooltip">Tasks</div>
-          </div>
-          <div class="d-flex justify-content-center align-items-center icon-btn">
+          <div class="d-flex justify-content-center align-items-center icon-btn ps-3">
             <button class="btn">
               <img height="20px" width="20px" src="/RasperMaths/assets/globe2.svg" alt="Globe icon">
             </button>
@@ -63,19 +62,21 @@
           <div class="dropdown">
             <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
               aria-expanded="false">
-              <img src="https://github.com/mdo.png" alt="mdo" width="40" height="40" class="rounded-circle">
+              <img src="https://github.com/mdo.png" alt="Loading..." width="40" height="40" class="rounded-circle">
             </a>
             <ul class="dropdown-menu text-small">
               <li class="px-3">
-                <h6 class="m-0 name">Profile failed to load</h6>
+                <h6 class="m-0 name">Loading...</h6>
               </li>
               <li class="px-3 d-flex pb-3">
                 <span class="pe-2">0 XP</span>
                 <span>0 gold</span>
               </li>
               <li><a class="dropdown-item" href="#">Achievements</a></li>
+              <li><a class="dropdown-item" href="#">My statistics</a></li>
               <li><a class="dropdown-item" href="#">Settings</a></li>
               <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="#">Contact us</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
@@ -155,6 +156,7 @@
     </div>
   </main>
   <script src="/RasperMaths/student/main.js"></script>
+  <script src="/RasperMaths/student/script.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </body>
 
