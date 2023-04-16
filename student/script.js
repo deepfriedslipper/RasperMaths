@@ -5,6 +5,10 @@ function showElement(element) {
   element.style.display = "";
 }
 
+function hideElement(element) {
+  element.style.display = "none";
+}
+
 input.addEventListener("focus", function () {
   for (var i = 0; i < navElements.length; i++) {
     navElements[i].style.display = "none";
