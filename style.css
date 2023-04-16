@@ -161,11 +161,17 @@ input[type="text"]:focus {
 }
 
 .searchbar {
-  width: 300px !important;
+  width: 200px !important;
+  transition: width 300ms ease !important;
 }
 
 .searchbar:focus {
   text-indent: 35px;
+  width: 300px !important;
+}
+
+.searchbar:focus~nav-item {
+  display: none;
 }
 
 .search-icon {
@@ -223,7 +229,7 @@ input[type="text"]:focus {
     width: calc(100% - 1rem) !important;
   }
 
-  .nav-item,
+  .home-nav-item,
   .login {
     display: none !important;
   }
@@ -250,7 +256,7 @@ input[type="text"]:focus {
     width: calc(33% - 1rem) !important;
   }
 
-  .nav-item,
+  .home-nav-item,
   .login {
     display: inline-flex !important;
   }
