@@ -121,69 +121,103 @@
         </a>
       </div>
 
-      <div class="border p-4 mt-5" style="border-radius: 2em;">
-        <h2 class="pb-2">Tasks</h2>
-        <div class="accordion" id="tasks">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="task1-heading">
-              <button class="accordion-button text-danger bg-light collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#task1" aria-expanded="false" aria-controls="task1">Rounding to 10, 100 and
-                1000</button>
-            </h2>
-            <div class="accordion-collapse collapse" aria-labelledby="task1-heading" data-bs-parent="#tasks" id="task1">
-              <div class="accordion-body">
-                <p><b>Mrs Smith</b><br>Due 30th February 2024</p>
-                <button class="btn btn-danger">Begin</button>
+      <div class=" my-5" style="border-radius: 2em;">
+        <h2 class="pb-2">Classes</h2>
+        <div class="container">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+
+            <div class="card d-inline-block m-2">
+              <div class="card-body">
+                <h5 class="card-title fw-semibold">9Y1 <small class="fw-normal">32 students</small></h5>
+                <p class="text-muted">C Davies, W Whitmore</p>
+                <button class="btn btn-danger mt-4 me-1">View</button>
+              </div>
+            </div>
+
+            <div class="card d-inline-flex m-2" style="background: #ffe5e5;">
+              <div class="card-body d-flex justify-content-center align-items-center flex-column">
+                <button class="btn btn-danger" style="border-radius: 50%;aspect-ratio: 1;">
+                  <img src="/RasperMaths/assets/plus.svg">
+                </button>
+                <span>Join class</span>
               </div>
             </div>
           </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="task2-heading">
-              <button class="accordion-button text-danger bg-light collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#task2" aria-expanded="false" aria-controls="task2">Advanced Trigonometry</button>
-            </h2>
-            <div class="accordion-collapse collapse" aria-labelledby="task2-heading" data-bs-parent="#tasks" id="task2">
-              <div class="accordion-body">
-                <p><b>Mrs Smith</b><br>Due 30th February 2024</p>
-                <button class="btn btn-danger">Begin</button>
+
+        </div>
+
+      </div>
+
+      <div class="row border" style="border-radius: 2rem;">
+        <div class="p-4 col-6" style="border-right: 1px rgb(226, 226, 226) solid;">
+          <h3 class="pb-2">Tasks</h3>
+          <div class="accordion" id="tasks">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="task1-heading">
+                <button class="accordion-button text-danger bg-light collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#task1" aria-expanded="false" aria-controls="task1">Rounding to 10, 100 and
+                  1000</button>
+              </h2>
+              <div class="accordion-collapse collapse" aria-labelledby="task1-heading" data-bs-parent="#tasks"
+                id="task1">
+                <div class="accordion-body">
+                  <p><b>Mrs Smith</b><br>Due 30th February 2024</p>
+                  <button class="btn btn-danger">Begin</button>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="task2-heading">
+                <button class="accordion-button text-danger bg-light collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#task2" aria-expanded="false" aria-controls="task2">Advanced Trigonometry</button>
+              </h2>
+              <div class="accordion-collapse collapse" aria-labelledby="task2-heading" data-bs-parent="#tasks"
+                id="task2">
+                <div class="accordion-body">
+                  <p><b>Mrs Smith</b><br>Due 30th February 2024</p>
+                  <button class="btn btn-danger">Begin</button>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="task3-heading">
+                <button class="accordion-button text-danger bg-light collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#task3" aria-expanded="false" aria-controls="task3">Factorising Quadratics</button>
+              </h2>
+              <div class="accordion-collapse collapse" aria-labelledby="task3-heading" data-bs-parent="#tasks"
+                id="task3">
+                <div class="accordion-body">
+                  <p><b>Mrs Smith</b><br>Due 30th February 2024</p>
+                  <button class="btn btn-danger">Begin</button>
+                </div>
               </div>
             </div>
           </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="task3-heading">
-              <button class="accordion-button text-danger bg-light collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#task3" aria-expanded="false" aria-controls="task3">Factorising Quadratics</button>
-            </h2>
-            <div class="accordion-collapse collapse" aria-labelledby="task3-heading" data-bs-parent="#tasks" id="task3">
-              <div class="accordion-body">
-                <p><b>Mrs Smith</b><br>Due 30th February 2024</p>
-                <button class="btn btn-danger">Begin</button>
+        </div>
+        <div class="p-4 col-6 h-auto">
+          <h3 class="pb-2">Upcoming tests</h3>
+          <div class="accordion" id="tests">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="test1-heading">
+                <button class="accordion-button text-danger bg-light collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#test1" aria-expanded="false" aria-controls="test1">Angles Topic Test</button>
+              </h2>
+              <div class="accordion-collapse collapse" aria-labelledby="test1-heading" data-bs-parent="#tests"
+                id="test1">
+                <div class="accordion-body">
+                  <p>
+                    <b>Mrs Smith</b>
+                    <br>
+                    30th February 2025
+                  </p>
+                  <button class="btn btn-danger">Revise</button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="border p-4 mt-5" style="border-radius: 2em;">
-        <h2 class="pb-2">Upcoming tests</h2>
-        <div class="accordion" id="tests">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="test1-heading">
-              <button class="accordion-button text-danger bg-light collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#test1" aria-expanded="false" aria-controls="test1">Angles Topic Test</button>
-            </h2>
-            <div class="accordion-collapse collapse" aria-labelledby="test1-heading" data-bs-parent="#tests" id="test1">
-              <div class="accordion-body">
-                <p>
-                  <b>Mrs Smith</b>
-                  <br>
-                  30th February 2025
-                </p>
-                <button class="btn btn-danger">Revise</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
     </div>
   </main>
   <script src="/RasperMaths/student/main.js"></script>
