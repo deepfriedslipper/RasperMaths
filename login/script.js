@@ -1,78 +1,61 @@
-const teacher = document.getElementById("teacher");
-const student = document.getElementById("student");
-const input = document.querySelector('.school');
-const auto_box = document.querySelector('.auto-complete-box');
-const school_wrapper = document.querySelector('school-wrapper');
-const section_2 = document.querySelector('.teacher-student');
-const section_3 = document.querySelector('.user-pass');
+const schools = ["School 1", "School 2", "School 3", "School 4", "School 5", "School 6"];
 
-const teacher_click = () => {
-  student.classList.remove('btn-secondary');
-  teacher.classList.remove('btn-light');
-  student.classList.add('btn-light');
-  teacher.classList.add('btn-secondary');
+const schoolInput = document.getElementById('schoolInput');
+const suggestionsBox = document.getElementById('suggestions-box');
 
-  section_3.classList.remove('visually-hidden');
-}
+var isTeacher;
 
-const student_click = () => {
-  student.classList.remove('btn-light');
-  teacher.classList.remove('btn-secondary');
-  student.classList.add('btn-secondary');
-  teacher.classList.add('btn-light');
+suggestionsBox.style.width = schoolInput.offsetWidth + 'px';
 
-  section_3.classList.remove('visually-hidden');
-}
+schoolInput.addEventListener('input', function (e) {
+  const inputText = e.target.value;
+  suggestionsBox.innerHTML = '';
 
-
-auto_box.style.width = `${input.offsetWidth}px`;
-
-window.addEventListener('resize', () => {
-  auto_box.style.width = `${input.offsetWidth}px`;
-});
-
-let suggestions = [
-  "Roundwood Park School",
-  "Test",
-  "Roundwood Primary School",
-  "Also Test",
-  "Test 3",
-  "Test 4"
-];
-
-input.onkeyup = (e) => {
-  let userData = e.target.value;
-  let emptyArray = [];
-  section_2.classList.remove("visually-hidden");
-  if (userData) {
-    emptyArray = suggestions.filter((data) => {
-      return data.toLocaleLowerCase().includes(userData.toLocaleLowerCase());
-    });
-    emptyArray = emptyArray.map((data) => {
-      return data = '<li>' + data + '</li>';
-    });
-  }
-  showSuggestions(emptyArray);
-  let allList = auto_box.querySelectorAll("li");
-  for (let i = 0; i < allList.length; i++) {
-    allList[i].setAttribute("onclick", "fill(this)");
-  }
-}
-
-function fill(element) {
-  console.log(element.textContent);
-}
-
-function showSuggestions(list) {
-  let listData;
-  if (!list.length) {
-    if (input.value == "") {
-      listData = '<li> Roundwood Park School</li> <li>Test</li> <li>Roundwood Primary School</li> <li>Also Test</li> <li>Test 3</li> <li>Test 4</li>';
+  if (inputText.length > 0) {
+    const matchedSchools = schools.filter(school => school.toLowerCase().startsWith(inputText.toLowerCase()));
+    if (matchedSchools.length > 0) {
+      matchedSchools.forEach(school => {
+        const li = document.createElement('li');
+        li.textContent = school;
+        li.addEventListener('click', function () {
+          schoolInput.value = school;
+          suggestionsBox.style.display = 'none';
+        });
+        suggestionsBox.appendChild(li);
+      });
+      suggestionsBox.style.display = 'block';
     } else {
-      listData = '<li class="not-listed">Is your school not listed here? <a href="#">Register here</a></li>';
+      suggestionsBox.style.display = 'none';
     }
   } else {
-    listData = list.join('');
+    suggestionsBox.style.display = 'none';
   }
-  auto_box.innerHTML = listData;
+});
+
+studentButton.addEventListener('click', function () {
+  studentButton.classList.add('active');
+  teacherButton.classList.remove('active');
+  isTeacher = false;
+});
+
+teacherButton.addEventListener('click', function () {
+  teacherButton.classList.add('active');
+  studentButton.classList.remove('active');
+  isTeacher = true;
+});
+
+document.addEventListener('click', function (e) {
+  if (!suggestionsBox.contains(e.target)) {
+    suggestionsBox.style.display = 'none';
+  }
+});
+
+function login() {
+  if (isTeacher) {
+    window.location.href = '/RasperMaths/teacher';
+  } else if (!isTeacher) {
+    window.location.href = '/RasperMaths/student';
+  } else {
+    console.log("Error");
+  }
 }
