@@ -1,5 +1,6 @@
 :root {
   --danger: #dc3545;
+  --dark-danger: #a71b29;
 }
 
 body,
@@ -46,10 +47,6 @@ html {
   transform: translateY(8%);
 }
 
-input[type="text"]:focus {
-  outline: var(--danger) 1px solid !important;
-}
-
 .required::after {
   content: ' *';
   color: red;
@@ -65,7 +62,7 @@ input[type="text"]:focus {
 
 .login-section {
   width: 80%;
-  padding: 4rem;
+  padding: 3rem;
 }
 
 .lesson-container {
@@ -93,58 +90,6 @@ input[type="text"]:focus {
 .subtopic.active button,
 .subtopic.active .video-frame iframe {
   display: inline-block;
-}
-
-.school {
-  width: 100%;
-  padding: 0.75rem;
-  border-radius: 8px;
-  transition: margin-bottom 300ms ease-in-out;
-}
-
-.school:focus {
-  margin-bottom: 200px !important;
-}
-
-.auto-complete-box {
-  position: absolute;
-  background: white;
-  margin-bottom: 2rem;
-  border-radius: 10px;
-  max-height: 0px;
-  overflow-y: scroll;
-  pointer-events: none;
-  transition: max-height 300ms ease-in-out, transform 300ms ease-in-out;
-  transform: translateY(15px);
-}
-
-.school:focus+.auto-complete-box {
-  max-height: 180px;
-  pointer-events: all;
-  padding: 0.5rem;
-  transform: translateY(-190px);
-}
-
-.school:focus+.auto-complete-box>li {
-  display: block;
-}
-
-.auto-complete-box li {
-  list-style: none;
-  padding: 0.5rem;
-  border-radius: 5px;
-  display: none;
-}
-
-.auto-complete-box li:hover {
-  background-color: var(--danger);
-  cursor: pointer;
-  color: white;
-}
-
-.not-listed:hover {
-  background: none !important;
-  color: black !important;
 }
 
 .topic-card {
