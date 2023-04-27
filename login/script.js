@@ -52,9 +52,9 @@ document.addEventListener('click', function (e) {
 
 function login() {
   if (isTeacher) {
-    window.location.href = '/RasperMaths/teacher';
+    window.location.href = '/teacher';
   } else if (!isTeacher) {
-    window.location.href = '/RasperMaths/student';
+    window.location.href = '/student';
   } else {
     console.log("Error");
   }
