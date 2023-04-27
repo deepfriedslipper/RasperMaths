@@ -57,5 +57,6 @@ function login() {
     window.location.href = 'raspermaths.github.io/student';
   } else {
     console.log("Error");
+    error.error(Error)
   }
 }
