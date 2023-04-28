@@ -52,9 +52,9 @@ document.addEventListener('click', function (e) {
 
 function login() {
   if (isTeacher) {
-    window.location.href = 'raspermaths.github.io/teacher';
+    window.location.href = '/teacher';
   } else if (!isTeacher) {
-    window.location.href = 'raspermaths.github.io/student';
+    window.location.href = '/student';
   } else {
     console.log("Error");
     error.error(Error)
