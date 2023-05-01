@@ -60,6 +60,13 @@ html {
   -ms-user-select: none;
 }
 
+.rm-breadcrumb-item::after {
+  content: '>';
+  padding: 5px;
+  font-weight: bold;
+  color: rgb(115, 115, 115)
+}
+
 .login-section {
   width: 80%;
   padding: 3rem;
