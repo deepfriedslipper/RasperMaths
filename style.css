@@ -37,6 +37,9 @@ html {
   height: 100%;
 }
 
+.rs-dropdown-link:hover {
+  background: attr(data-colour);
+}
 
 .sidebar-toggle:focus {
   outline: 2px solid var(--danger) !important;
