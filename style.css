@@ -37,8 +37,8 @@ html {
   height: 100%;
 }
 
-.rs-dropdown-link:hover {
-  background: attr(data-colour);
+.rs-dropdown-link:not(.rs-dropdown-link:hover) {
+  background: rgb(200, 200, 200);
 }
 
 .sidebar-toggle:focus {
