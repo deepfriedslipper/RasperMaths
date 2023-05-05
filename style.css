@@ -37,6 +37,9 @@ html {
   height: 100%;
 }
 
+.rs-dropdown-link:not(.rs-dropdown-link:hover) {
+  background: rgb(200, 200, 200) !important;
+}
 
 .sidebar-toggle:focus {
   outline: 2px solid var(--danger) !important;
@@ -219,9 +222,5 @@ html {
 
   .login-section {
     width: 70%;
-  }
-
-  .tests {
-    border-top: none !important;
   }
 }
