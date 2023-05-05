@@ -112,6 +112,10 @@ html {
   height: 50px;
 }
 
+.tests {
+  border-top: 1px rgb(226, 226, 226) solid;
+}
+
 .searchbar {
   width: 200px !important;
   transition: width 300ms ease !important;
@@ -215,5 +219,9 @@ html {
 
   .login-section {
     width: 70%;
+  }
+
+  .tests {
+    border-top: none !important;
   }
 }
