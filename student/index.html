@@ -30,8 +30,11 @@
           <img src="/assets/logo.svg" class="logo d-none d-lg-block">
           <img src="/assets/small_logo.svg" class="logo d-block d-lg-none" alt="RasperMaths Logo">
         </a>
-
-        <form class="ps-3 me-2" role="search" wtx-context="A91D5B12-3821-4D3E-994B-418D4C31C61E">
+        <button class="btn search-toggle d-lg-none">
+          <img src="/assets/search.svg">
+        </button>
+        <form class="ps-3 me-2 d-none d-lg-inline-block" role="search"
+          wtx-context="A91D5B12-3821-4D3E-994B-418D4C31C61E">
           <input type="search" class="form-control searchbar" placeholder="Search..." aria-label="Search"
             wtx-context="A4B1769B-9402-4FE8-8B0F-6E1D5FAEFC36">
           <button class="btn btn-light border-secondary border-opacity-25 search-icon">
@@ -102,7 +105,8 @@
     <div class="container">
       <h1>Welcome, Rafi.</h1>
       <div class="row pt-5 pb-2">
-        <a class="btn col-lg-4 d-flex align-items-center justify-content-center border-end border-2">
+        <a
+          class="btn col-4 d-flex align-items-center justify-content-center border-end border-2 flex-lg-row flex-column">
           <img src="/assets/1-square.svg" class="p-3"
             style="-webkit-user-drag:none;-moz-user-select:none;user-select:none;-webkit-user-select:none;-ms-user-select:none;">
           <div class="px-3" style="text-align:left">
@@ -110,12 +114,13 @@
             <span style="font-size:large;">0 XP</span>
           </div>
         </a>
-        <a class="btn col-lg-4 d-flex align-items-center justify-content-center border-end border-2">
+        <a
+          class="btn col-4 d-flex align-items-center justify-content-center border-end border-2 flex-lg-row flex-column">
           <img src="/assets/piggy-bank.svg" class="p-3"
             style="-webkit-user-drag:none;-moz-user-select:none;user-select:none;-webkit-user-select:none;-ms-user-select:none;">
           <span style="font-size:large;" class="p-3">0 Gold</span>
         </a>
-        <a class="btn col-lg-4 d-flex align-items-center justify-content-center">
+        <a class="btn col-4 d-flex align-items-center justify-content-center flex-lg-row flex-column">
           <img src="/assets/trophy.svg" class="p-3 no-drag">
           <span style="font-size:large;" class="p-3">0 Achievements unlocked</span>
         </a>
