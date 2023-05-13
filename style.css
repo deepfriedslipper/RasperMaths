@@ -38,7 +38,8 @@ html {
 }
 
 .rs-dropdown-link:not(.rs-dropdown-link:hover) {
-  background: rgb(200, 200, 200) !important;
+  background: white !important;
+  color: black !important;
 }
 
 .sidebar-toggle:focus {
