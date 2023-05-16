@@ -1,0 +1,11 @@
+Algebra > Factorising and Expanding
+
+EXPANDING QUADRATICS
+
+Hello, and welcome back to Rasper Maths. I'm Mr Amelines and today we're going to be covering expanding quadratics.
+
+Previously, we have expanded brackets that look like this, with a bracket and a number outside. However, we'll be looking at expanding 2 brackets in this video.
+
+There are several methods that you can use to expand these expressions, but I'll go through 2 in this lesson.
+
+The first method is to multiply each number in one bracket by everything in the otber bracket. We can reformat the expression like this and then just use the method we covered when expanding single brackets.
