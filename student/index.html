@@ -27,14 +27,9 @@
     <header class="d-flex flex-wrap justify-content-between py-3 mb-4 border-bottom">
       <div class="start nav">
         <a href="/student/" class="d-flex align-items-center">
-          <img src="/assets/logo.svg" class="logo d-none d-lg-block">
-          <img src="/assets/small_logo.svg" class="logo d-block d-lg-none" alt="RasperMaths Logo">
+          <img src="/assets/logo.svg" class="logo d-block">
         </a>
-        <button class="btn search-toggle d-lg-none">
-          <img src="/assets/search.svg">
-        </button>
-        <form class="ps-3 me-2 d-none d-lg-inline-block" role="search"
-          wtx-context="A91D5B12-3821-4D3E-994B-418D4C31C61E">
+        <form class="ps-3 me-2 d-inline-block" role="search" wtx-context="A91D5B12-3821-4D3E-994B-418D4C31C61E">
           <input type="search" class="form-control searchbar" placeholder="Search..." aria-label="Search"
             wtx-context="A4B1769B-9402-4FE8-8B0F-6E1D5FAEFC36">
           <button class="btn btn-light border-secondary border-opacity-25 search-icon">
@@ -52,12 +47,70 @@
 
       <div class="end">
         <ul class="nav d-flex justify-content-between">
-          <div class="d-flex justify-content-center align-items-center icon-btn ps-3">
+          <div class="d-flex justify-content-center align-items-center pe-2 icon-btn">
             <button class="btn">
-              <img height="20px" width="20px" src="/assets/globe2.svg" alt="Globe icon">
+              <img height="20px" width="20px" src="/assets/bell-fill.svg" alt="Notifications icon">
             </button>
-            <div class="tooltip">Language</div>
+            <div class="tooltip">Notifications</div>
           </div>
+          <div class="dropdown">
+            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <img src="https://github.com/mdo.png" alt="Loading..." width="40" height="40" class="rounded-circle">
+            </a>
+            <ul class="dropdown-menu text-small">
+              <li class="px-3">
+                <h6 class="m-0 name">Loading...</h6>
+              </li>
+              <li class="px-3 d-flex pb-3">
+                <span class="pe-2">0 XP</span>
+                <span>0 gold</span>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/student/achievements">Achievements</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">My statistics</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Settings</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Profile</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/contact">Contact us</a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="/">Sign out</a></li>
+            </ul>
+          </div>
+        </ul>
+      </div>
+
+    </header>
+    <header class="d-flex flex-wrap justify-content-between py-3 mb-4 border-bottom">
+      <div class="start nav">
+        <button class="btn" style="aspect-ratio: 1/1 !important;">
+          <i class="bi bi-list"></i>
+        </button>
+        <a href="/student/" class="d-flex align-items-center">
+          <img src="/assets/small_logo.svg" class="logo d-block" alt="RasperMaths Logo">
+        </a>
+        <form class="ps-3 me-2 d-none" role="search" wtx-context="A91D5B12-3821-4D3E-994B-418D4C31C61E">
+          <input type="search" class="form-control searchbar" placeholder="Search..." aria-label="Search"
+            wtx-context="A4B1769B-9402-4FE8-8B0F-6E1D5FAEFC36">
+          <button class="btn btn-light border-secondary border-opacity-25 search-icon">
+            <img src="/assets/search.svg">
+          </button>
+        </form>
+
+      </div>
+
+      <div class="end">
+        <ul class="nav d-flex justify-content-between">
           <div class="d-flex justify-content-center align-items-center pe-2 icon-btn">
             <button class="btn">
               <img height="20px" width="20px" src="/assets/bell-fill.svg" alt="Notifications icon">
@@ -133,7 +186,7 @@
         <div class="container">
           <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
 
-            <div class="card-wrapper d-inline-block" style="height: 170px !important;">
+            <div class="card-wrapper d-inline-block p-1" style="height: 175px !important;">
               <div class="card h-100">
                 <div class="card-body">
                   <h5 class="card-title fw-semibold">9Y1 <small class="fw-normal">32 students</small></h5>
@@ -143,7 +196,7 @@
               </div>
             </div>
 
-            <div class="card-wrapper d-inline-block" style="height: 170px !important;">
+            <div class="card-wrapper d-inline-block p-1" style="height: 175px !important;">
               <div class="card h-100" style="background: #ffe5e5;">
                 <div class="card-body d-flex justify-content-center align-items-center flex-column">
                   <button class="btn btn-danger" style="border-radius: 50%;aspect-ratio: 1;">
