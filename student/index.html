@@ -24,7 +24,7 @@
 
 <body>
   <div class="container">
-    <header class="d-flex flex-wrap justify-content-between py-3 mb-4 border-bottom">
+    <header class="d-none d-lg-flex flex-wrap justify-content-between py-3 mb-4 border-bottom">
       <div class="start nav">
         <a href="/student/" class="d-flex align-items-center">
           <img src="/assets/logo.svg" class="logo d-block">
@@ -89,24 +89,18 @@
           </div>
         </ul>
       </div>
-
     </header>
-    <header class="d-flex flex-wrap justify-content-between py-3 mb-4 border-bottom">
+    <header class="d-none d-md-flex d-lg-none flex-wrap justify-content-between py-3 mb-4 border-bottom">
       <div class="start nav">
         <button class="btn" style="aspect-ratio: 1/1 !important;">
           <i class="bi bi-list"></i>
         </button>
-        <a href="/student/" class="d-flex align-items-center">
-          <img src="/assets/small_logo.svg" class="logo d-block" alt="RasperMaths Logo">
-        </a>
-        <form class="ps-3 me-2 d-none" role="search" wtx-context="A91D5B12-3821-4D3E-994B-418D4C31C61E">
-          <input type="search" class="form-control searchbar" placeholder="Search..." aria-label="Search"
-            wtx-context="A4B1769B-9402-4FE8-8B0F-6E1D5FAEFC36">
-          <button class="btn btn-light border-secondary border-opacity-25 search-icon">
-            <img src="/assets/search.svg">
-          </button>
-        </form>
+      </div>
 
+      <div class="nav">
+        <a href="/student/" class="d-flex align-items-center">
+          <img src="/assets/logo.svg" class="logo d-block" alt="RasperMaths Logo">
+        </a>
       </div>
 
       <div class="end">
@@ -150,6 +144,31 @@
               </li>
               <li><a class="dropdown-item" href="/">Sign out</a></li>
             </ul>
+          </div>
+        </ul>
+      </div>
+
+    </header>
+    <header class="d-flex d-md-none flex-wrap justify-content-between py-3 mb-4 border-bottom">
+      <div class="start nav">
+        <button class="btn" style="aspect-ratio: 1/1 !important;">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+
+      <div class="nav">
+        <a href="/student/" class="d-flex align-items-center">
+          <img src="/assets/small_logo.svg" class="logo d-block" alt="RasperMaths Logo">
+        </a>
+      </div>
+
+      <div class="end">
+        <ul class="nav d-flex justify-content-between">
+          <div class="d-flex justify-content-center align-items-center pe-2 icon-btn">
+            <button class="btn">
+              <img height="20px" width="20px" src="/assets/bell-fill.svg" alt="Notifications icon">
+            </button>
+            <div class="tooltip">Notifications</div>
           </div>
         </ul>
       </div>

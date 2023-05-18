@@ -188,11 +188,6 @@ html {
     margin: 0.5rem;
     width: calc(100% - 1rem) !important;
   }
-
-  .home-nav-item,
-  .login {
-    display: none !important;
-  }
 }
 
 /* Medium */
@@ -202,10 +197,6 @@ html {
     margin: 0.5rem;
     width: calc(50% - 1rem) !important;
   }
-
-  .login {
-    display: inline-flex !important;
-  }
 }
 
 /* Large */
@@ -214,11 +205,6 @@ html {
   .subtopic {
     margin: 0.5rem;
     width: calc(33% - 1rem) !important;
-  }
-
-  .home-nav-item,
-  .login {
-    display: inline-flex !important;
   }
 
   .login-section {
