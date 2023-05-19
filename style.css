@@ -39,6 +39,14 @@ html {
 
 .rs-dropdown-link:not(.rs-dropdown-link:hover) {
   background: white !important;
+}
+
+.rs-dropdown-link:not(.rs-dropdown-link:hover) a {
+  color: black !important;
+}
+
+.rs-dropdown-link:not(.rs-dropdown-link:hover) small {
+  background: white !important;
   color: black !important;
 }
 

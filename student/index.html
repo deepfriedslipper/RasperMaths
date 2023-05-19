@@ -92,7 +92,9 @@
     </header>
     <header class="d-none d-md-flex d-lg-none flex-wrap justify-content-between py-3 mb-4 border-bottom">
       <div class="start nav">
-        <button class="btn" style="aspect-ratio: 1/1 !important;">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+          aria-expanded="false" aria-label="Toggle navigation">
           <i class="bi bi-list"></i>
         </button>
       </div>
@@ -151,7 +153,9 @@
     </header>
     <header class="d-flex d-md-none flex-wrap justify-content-between py-3 mb-4 border-bottom">
       <div class="start nav">
-        <button class="btn" style="aspect-ratio: 1/1 !important;">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+          aria-expanded="false" aria-label="Toggle navigation">
           <i class="bi bi-list"></i>
         </button>
       </div>
@@ -175,6 +179,26 @@
 
     </header>
   </div>
+  <nav>
+    <div class="collapse" id="navbarToggleExternalContent">
+      <div class="container pb-4">
+        <h5 class="text-black h4 mb-3">Menu</h5>
+
+        <form>
+          <input class="w-100 form-control mb-4" placeholder="Search...">
+        </form>
+        <ul class="list-unstyled mb-3">
+          <hr>
+          <li><a class="text-black text-decoration-none">Lessons</a></li>
+          <hr>
+          <li><a class="text-black text-decoration-none">Tasks</a></li>
+          <hr>
+          <li><a class="text-muted text-decoration-none">Revision <small>(currently unavailable)</small></a></li>
+          <hr>
+        </ul>
+      </div>
+    </div>
+  </nav>
   <main>
     <div class="container">
       <h1>Welcome, Rafi.</h1>
@@ -300,7 +324,7 @@
           </div>
         </div>
       </div>
-<br>
+      <br>
     </div>
   </main>
   <script src="/student/main.js"></script>
