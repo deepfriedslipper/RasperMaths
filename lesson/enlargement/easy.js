@@ -1,1 +1,2 @@
-question_box = document.getElementById(".question_box");
+question = document.querySelector("#question_title");
+question.innerHTML = "Hello this is a test";
