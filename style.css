@@ -41,7 +41,7 @@ html {
   background: white !important;
 }
 
-.rs-dropdown-link:not(.rs-dropdown-link:hover) a {
+.rs-dropdown-link:not(.rs-dropdown-link:hover) button {
   color: black !important;
 }
 
