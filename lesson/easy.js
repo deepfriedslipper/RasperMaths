@@ -1,22 +1,21 @@
 const question = document.querySelector("#question_title");
+const fs = require('fs');
 
-function readCSVFile(file) {
+// Function to read a CSV file
+function readCSVFile(filename) {
   return new Promise((resolve, reject) => {
-    const reader = new FileReader();
+    fs.readFile(filename, 'utf8', (err, data) => {
+      if (err) {
+        reject(err);
+        return;
+      }
 
-    reader.onload = (event) => {
-      const contents = event.target.result;
-      const lines = contents.trim().split('\n');
+      const lines = data.trim().split('\n');
       resolve(lines);
-    };
-
-    reader.onerror = (event) => {
-      reject(event.target.error);
-    };
-
-    reader.readAsText(file);
+    });
   });
 }
+
 
 function pickRandomLine(lines) {
   const randomIndex = Math.floor(Math.random() * (lines.length - 1)) + 1;
