@@ -1,6 +1,6 @@
 const question = document.querySelector("#question_title");
 
-function choose_question(topic){
+function choose_easy_question(topic){
   fetch(topic + '/easy_multiple_choice.csv')
     .then(response => response.text())
     .then(data => {
