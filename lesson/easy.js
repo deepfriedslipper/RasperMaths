@@ -1,4 +1,4 @@
-const question = document.querySelector("#question_title");
+const question = document.querySelector(".question_title");
 
 function choose_question(var topic){
   fetch(topic + '/easy_multiple_choice.csv')
