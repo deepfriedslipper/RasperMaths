@@ -5,7 +5,6 @@ function choose_question(topic) {
     .then(response => response.text())
     .then(data => {
       const lines = data.split('\n');
-      lines.shift();
       const randomIndex = Math.floor(Math.random() * lines.length);
       const randomLine = lines[randomIndex];
 
