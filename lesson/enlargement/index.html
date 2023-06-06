@@ -136,10 +136,12 @@
           <small class="text-muted d-inline-block fw-bold m-2">AG01</small>
         </div>
         <div class="dropdown">
-          <button class="btn">
-             <i class="bi bi-three-dots"></i>
+          <button class="btn" type="button" data-bs-toggle="dropdown">
+            <i class="bi bi-three-dots"></i>
           </button>
-          <ul class="dropdown-menu"></ul>
+          <ul class="dropdown-menu">
+            <li><button class="btn">Copy link</button></li>
+          </ul>
         </div>
 
       </div>
@@ -150,7 +152,7 @@
             role="tab" aria-controls="vid" aria-selected="true">Video</button>
         </li>
         <li class="nav-item">
-          <button class="nav-link" id="resources-tab" data-bs-toggle="tab" data-bs-target="#resources" type="button" 
+          <button class="nav-link" id="resources-tab" data-bs-toggle="tab" data-bs-target="#resources" type="button"
             role="tab" aria-controls="resources" aria-selected="false">Lesson resources</button>
         </li>
         <li class="nav-item" role="presentation">
@@ -167,10 +169,17 @@
         <div class="tab-pane fade" id="resources" role="tabpanel" aria-labelledby="resources-tab">
           <h5>Video transcript</h5>
           <button class="btn btn-primary text-white">Download script.txt</button>
-          <h5>Physics and Maths Tutor <small>(licensed under <a href="https://bit.ly/pmt-cc">CC BY-NC-ND 4.0</a>)</small></h5>
-          <a class="btn btn-primary" href="https://www.physicsandmathstutor.com/pdf-pages/?pdf=https%3A%2F%2Fpmt.physicsandmathstutor.com%2Fdownload%2FMaths%2FGCSE%2FWorksheets%2FAlgebra%2FGraphs%2Ff.%2520Translations%2520and%2520Reflections%2520of%2520Functions.pdf">Download Worksheet: Translations and Reflections of Functions.pdf</a>
-          <a class="btn btn-primary" href="https://www.physicsandmathstutor.com/pdf-pages/?pdf=https%3A%2F%2Fpmt.physicsandmathstutor.com%2Fdownload%2FMaths%2FGCSE%2FWorksheets%2FAlgebra%2FGraphs%2FSolutions%2Ff.%2520Translations%2520and%2520Reflections.pdf">Download Worksheet Solutions: Translations and Reflections of Functions.pdf</a>
-          <a class="btn btn-primary" href="https://www.physicsandmathstutor.com/pdf-pages/?pdf=https%3A%2F%2Fpmt.physicsandmathstutor.com%2Fdownload%2FMaths%2FGCSE%2FNotes%2FAlgebra%2FGraphs%2Ff.%2520Translations%2520and%2520Reflections.pdf">Download Notes: Translations and Reflections of Functions.pdf</a>
+          <h5>Physics and Maths Tutor <small>(licensed under <a href="https://bit.ly/pmt-cc">CC BY-NC-ND
+                4.0</a>)</small></h5>
+          <a class="btn btn-primary"
+            href="https://www.physicsandmathstutor.com/pdf-pages/?pdf=https%3A%2F%2Fpmt.physicsandmathstutor.com%2Fdownload%2FMaths%2FGCSE%2FWorksheets%2FAlgebra%2FGraphs%2Ff.%2520Translations%2520and%2520Reflections%2520of%2520Functions.pdf">Download
+            Worksheet: Translations and Reflections of Functions.pdf</a>
+          <a class="btn btn-primary"
+            href="https://www.physicsandmathstutor.com/pdf-pages/?pdf=https%3A%2F%2Fpmt.physicsandmathstutor.com%2Fdownload%2FMaths%2FGCSE%2FWorksheets%2FAlgebra%2FGraphs%2FSolutions%2Ff.%2520Translations%2520and%2520Reflections.pdf">Download
+            Worksheet Solutions: Translations and Reflections of Functions.pdf</a>
+          <a class="btn btn-primary"
+            href="https://www.physicsandmathstutor.com/pdf-pages/?pdf=https%3A%2F%2Fpmt.physicsandmathstutor.com%2Fdownload%2FMaths%2FGCSE%2FNotes%2FAlgebra%2FGraphs%2Ff.%2520Translations%2520and%2520Reflections.pdf">Download
+            Notes: Translations and Reflections of Functions.pdf</a>
         </div>
         <div class="tab-pane fade" id="quiz" role="tabpanel" aria-labelledby="quiz-tab">
           <div class="dropdown my-4 w-100 d-flex justify-content-center">
@@ -197,21 +206,22 @@
             </ul>
           </div>
           <div class="question_box">
+            <img class="question_img">
             <h2 class="text-center d-block mb-4 question_title">Question</h2>
-            <div class="row">
-              <div class="card col-6 p-3">
-                <button class="btn">Option 1</button>
+            <div class="d-flex">
+              <div class="card m-1 w-100 p-2">
+                <button class="btn option1">Option 1</button>
               </div>
-              <div class="card col-6 p-3">
-                <button class="btn">Option 2</button>
+              <div class="card m-1 w-100 p-2">
+                <button class="btn option2">Option 2</button>
               </div>
             </div>
-            <div class="row">
-              <div class="card col-6 p-3">
-                <button class="btn">Option 3</button>
+            <div class="d-flex">
+              <div class="card m-1 w-100 p-2">
+                <button class="btn option3">Option 3</button>
               </div>
-              <div class="card col-6 p-3">
-                <button class="btn">Option 4</button>
+              <div class="card m-1 w-100 p-2">
+                <button class="btn option4">Option 4</button>
               </div>
             </div>
           </div>

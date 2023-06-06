@@ -1,4 +1,9 @@
 const question = document.querySelector(".question_title");
+const option_1 = document.querySelector(".option1");
+const option_2 = document.querySelector(".option2");
+const option_3 = document.querySelector(".option3");
+const option_4 = document.querySelector(".option4");
+const img = document.querySelector(".question_img")
 
 function choose_question() {
   fetch('easy_multiple_choice.csv')
@@ -6,16 +11,24 @@ function choose_question() {
     .then(data => {
       const lines = data.split('\n');
       lines.shift();
-      console.log(lines);
       const randomIndex = Math.floor(Math.random() * lines.length);
-      console.log(randomIndex);
       const randomLine = lines[randomIndex];
       lines.splice(randomIndex, 1);
       var array = randomLine.split(",");
       question.textContent = array[0];
+
+      if (array[1] != 'null') {
+        img.src = array[1];
+      } else {
+        img.src = null;
+      }
+
       array.splice(0, 2);
       array = shuffle(array);
-      console.log(array);
+      option_1.textContent = array[0];
+      option_2.textContent = array[1];
+      option_3.textContent = array[2];
+      option_4.textContent = array[3];
     })
     .catch(error => {
       question.textContent = 'Error: ' + error;
@@ -24,10 +37,6 @@ function choose_question() {
 
 function begin_easy() {
   choose_question();
-}
-
-function check() {
-
 }
 
 function shuffle(a) {
