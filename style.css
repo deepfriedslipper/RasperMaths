@@ -37,6 +37,18 @@ html {
   height: 100%;
 }
 
+.gallery {
+  background: #EEE;
+}
+
+.gallery-cell {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8C8;
+  counter-increment: gallery-cell;
+}
+
 .rs-dropdown-link:not(.rs-dropdown-link:hover) {
   background: white !important;
 }
