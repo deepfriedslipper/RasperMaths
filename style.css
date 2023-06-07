@@ -37,15 +37,11 @@ html {
   height: 100%;
 }
 
-.gallery {
-  background: #EEE;
-}
-
-.gallery-cell {
+.cell {
   width: 66%;
   height: 200px;
   margin-right: 10px;
-  background: #8C8;
+  background: rgb(206, 206, 206);
   counter-increment: gallery-cell;
 }
 
