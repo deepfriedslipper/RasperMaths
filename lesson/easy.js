@@ -3,10 +3,24 @@ const option_1 = document.querySelector(".option1");
 const option_2 = document.querySelector(".option2");
 const option_3 = document.querySelector(".option3");
 const option_4 = document.querySelector(".option4");
-const img = document.querySelector(".question_img")
+const img = document.querySelector(".question_img");
+const input_box = document.querySelector(".input-box");
 
 function choose_question() {
-  fetch('easy_multiple_choice.csv')
+  var num = Math.floor(Math.random() * 2);
+  if (num == 1){
+    multiple_choice();
+  } else {
+    input();
+  }
+}
+
+function input() {
+  
+}
+
+function multiple_choice() {
+    fetch('easy_multiple_choice.csv')
     .then(response => response.text())
     .then(data => {
       const lines = data.split('\n');
