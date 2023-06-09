@@ -33,11 +33,10 @@ function input() {
     } else {
       img.src = null;
     }
-
-    })
-    .catch(error => {
-      question.textContent = 'Error: ' + error;
-    });
+  })
+  .catch(error => {
+    question.textContent = 'Error: ' + error;
+  });
 }
 
 function multiple_choice() {
