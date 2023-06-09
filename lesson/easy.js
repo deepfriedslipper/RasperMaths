@@ -17,6 +17,11 @@ function choose_question() {
 
 function input() {
   input_box.style.display = 'inline-block';
+  option_1.style.display = 'none';
+  option_2.style.display = 'none';
+  option_3.style.display = 'none';
+  option_4.style.display = 'none';
+  
   fetch('easy.csv')
   .then(response => response.text())
   .then(data => {
@@ -41,6 +46,11 @@ function input() {
 
 function multiple_choice() {
     input_box.style.display = 'none';
+    option_1.style.display = 'block';
+    option_2.style.display = 'block';
+    option_3.style.display = 'block';
+    option_4.style.display = 'block';
+  
     fetch('easy_multiple_choice.csv')
     .then(response => response.text())
     .then(data => {
