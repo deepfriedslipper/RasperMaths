@@ -16,10 +16,32 @@ function choose_question() {
 }
 
 function input() {
+  input_box.style.display = 'inline-block';
   fetch('easy.csv')
+  .then(response => response.text())
+  .then(data => {
+    const lines = data.split('\n');
+    lines.shift();
+    const randomIndex = Math.floor(Math.random() * lines.length);
+    const randomLine = lines[randomIndex];
+    lines.splice(randomIndex, 1);
+    var array = randomLine.split(",");
+    question.textContent = array[0];
+
+    if (array[1] != 'null') {
+      img.src = array[1];
+    } else {
+      img.src = null;
+    }
+
+    })
+    .catch(error => {
+      question.textContent = 'Error: ' + error;
+    });
 }
 
 function multiple_choice() {
+    input_box.style.display = 'none';
     fetch('easy_multiple_choice.csv')
     .then(response => response.text())
     .then(data => {
