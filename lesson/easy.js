@@ -16,7 +16,7 @@ function choose_question() {
 }
 
 function input() {
-  
+  fetch('easy.csv')
 }
 
 function multiple_choice() {
