@@ -158,3 +158,7 @@ option_4.onclick = function(){
     option_4_wrapper.style.background = "red";
   }
 }
+
+submit.onclick = function(){
+  choose_question();
+}
