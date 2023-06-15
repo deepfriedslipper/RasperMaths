@@ -107,6 +107,6 @@ function shuffle(a) {
   return a;
 }
 
-option1.onclick = function(){
+option_1.onclick = function(){
   option_1_wrapper.style.background = "red";
 }
