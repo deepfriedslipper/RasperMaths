@@ -109,16 +109,28 @@ function shuffle(a) {
 
 option_1.onclick = function(){
   option_1_wrapper.style.background = "red";
+  option_2_wrapper.style.background = "white";
+  option_3_wrapper.style.background = "white";
+  option_4_wrapper.style.background = "white";
 }
 
 option_2.onclick = function(){
   option_2_wrapper.style.background = "red";
+  option_1_wrapper.style.background = "white";
+  option_3_wrapper.style.background = "white";
+  option_4_wrapper.style.background = "white";
 }
 
 option_3.onclick = function(){
   option_3_wrapper.style.background = "red";
+  option_2_wrapper.style.background = "white";
+  option_1_wrapper.style.background = "white";
+  option_4_wrapper.style.background = "white";
 }
 
 option_4.onclick = function(){
   option_4_wrapper.style.background = "red";
+  option_2_wrapper.style.background = "white";
+  option_3_wrapper.style.background = "white";
+  option_1_wrapper.style.background = "white";
 }
