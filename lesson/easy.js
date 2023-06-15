@@ -9,6 +9,7 @@ const option_3_wrapper = document.querySelector(".option3-wrapper");
 const option_4_wrapper = document.querySelector(".option4-wrapper");
 const img = document.querySelector(".question_img");
 const input_box = document.querySelector(".input-box");
+const submit = document.querySelector("submit_button");
 
 var selection = null;
 
