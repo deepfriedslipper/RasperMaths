@@ -60,6 +60,10 @@ function multiple_choice() {
   option_2_wrapper.style.display = 'flex';
   option_3_wrapper.style.display = 'flex';
   option_4_wrapper.style.display = 'flex';
+  option_1_wrapper.style.background = "white";
+  option_2_wrapper.style.background = "white";
+  option_3_wrapper.style.background = "white";
+  option_4_wrapper.style.background = "white";
 
   fetch('easy_multiple_choice.csv')
     .then(response => response.text())
