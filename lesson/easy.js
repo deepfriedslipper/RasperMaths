@@ -10,6 +10,8 @@ const option_4_wrapper = document.querySelector(".option4-wrapper");
 const img = document.querySelector(".question_img");
 const input_box = document.querySelector(".input-box");
 
+var selection = null;
+
 function choose_question() {
   var num = Math.floor(Math.random() * 2);
   if (num == 1) {
@@ -103,4 +105,8 @@ function shuffle(a) {
     a[j] = x;
   }
   return a;
+}
+
+option1.onclick = function(){
+  option_1_wrapper.style.background = "red";
 }
