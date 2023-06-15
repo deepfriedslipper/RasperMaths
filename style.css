@@ -9,6 +9,7 @@ html {
   padding: 0;
   display: block;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 .sidebar {
