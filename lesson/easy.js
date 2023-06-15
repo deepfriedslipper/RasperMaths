@@ -108,29 +108,53 @@ function shuffle(a) {
 }
 
 option_1.onclick = function(){
-  option_1_wrapper.style.background = "red";
-  option_2_wrapper.style.background = "white";
-  option_3_wrapper.style.background = "white";
-  option_4_wrapper.style.background = "white";
+  if (selection == 1){
+    selection = null;
+    option_1_wrapper.style.background = "white";
+  } else {
+    selection = 1;
+    option_1_wrapper.style.background = "red";
+    option_2_wrapper.style.background = "white";
+    option_3_wrapper.style.background = "white";
+    option_4_wrapper.style.background = "white";
+  }
 }
 
 option_2.onclick = function(){
-  option_2_wrapper.style.background = "red";
-  option_1_wrapper.style.background = "white";
-  option_3_wrapper.style.background = "white";
-  option_4_wrapper.style.background = "white";
+  if (selection == 2){
+    selection = null;
+    option_2_wrapper.style.background = "white";
+  } else {
+    selection = 2;
+    option_1_wrapper.style.background = "white";
+    option_2_wrapper.style.background = "red";
+    option_3_wrapper.style.background = "white";
+    option_4_wrapper.style.background = "white";
+  }
 }
 
 option_3.onclick = function(){
-  option_3_wrapper.style.background = "red";
-  option_2_wrapper.style.background = "white";
-  option_1_wrapper.style.background = "white";
-  option_4_wrapper.style.background = "white";
+  if (selection == 3){
+    selection = null;
+    option_3_wrapper.style.background = "white";
+  } else {
+    selection = 3;
+    option_1_wrapper.style.background = "white";
+    option_2_wrapper.style.background = "white";
+    option_3_wrapper.style.background = "red";
+    option_4_wrapper.style.background = "white";
+  }
 }
 
 option_4.onclick = function(){
-  option_4_wrapper.style.background = "red";
-  option_2_wrapper.style.background = "white";
-  option_3_wrapper.style.background = "white";
-  option_1_wrapper.style.background = "white";
+  if (selection == 4){
+    selection = null;
+    option_4_wrapper.style.background = "white";
+  } else {
+    selection = 4;
+    option_1_wrapper.style.background = "white";
+    option_2_wrapper.style.background = "white";
+    option_3_wrapper.style.background = "white";
+    option_4_wrapper.style.background = "red";
+  }
 }
