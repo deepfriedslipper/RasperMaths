@@ -80,9 +80,10 @@ function multiple_choice() {
       if (array[1] != 'null') {
         console.log("Is not null");
         img.src = array[1];
+        img.style.display = 'block';
       } else {
         console.log("Is null");
-        img.src = null;
+        img.style.display = 'none';
       }
 
       array.splice(0, 2);
@@ -113,8 +114,8 @@ function shuffle(a) {
   return a;
 }
 
-option_1.onclick = function(){
-  if (selection == 1){
+option_1.onclick = function () {
+  if (selection == 1) {
     selection = null;
     option_1_wrapper.style.background = "white";
   } else {
@@ -126,8 +127,8 @@ option_1.onclick = function(){
   }
 }
 
-option_2.onclick = function(){
-  if (selection == 2){
+option_2.onclick = function () {
+  if (selection == 2) {
     selection = null;
     option_2_wrapper.style.background = "white";
   } else {
@@ -139,8 +140,8 @@ option_2.onclick = function(){
   }
 }
 
-option_3.onclick = function(){
-  if (selection == 3){
+option_3.onclick = function () {
+  if (selection == 3) {
     selection = null;
     option_3_wrapper.style.background = "white";
   } else {
@@ -152,8 +153,8 @@ option_3.onclick = function(){
   }
 }
 
-option_4.onclick = function(){
-  if (selection == 4){
+option_4.onclick = function () {
+  if (selection == 4) {
     selection = null;
     option_4_wrapper.style.background = "white";
   } else {
@@ -165,19 +166,19 @@ option_4.onclick = function(){
   }
 }
 
-submit.onclick = function(){
-  switch (selection){
+submit.onclick = function () {
+  switch (selection) {
     case 1:
-      if (option_1.text_content == ans){choose_question();}
+      if (option_1.text_content == ans) { choose_question(); }
       break;
     case 2:
-      if (option_2.text_content == ans){choose_question();}
+      if (option_2.text_content == ans) { choose_question(); }
       break;
     case 3:
-      if (option_3.text_content == ans){choose_question();}
+      if (option_3.text_content == ans) { choose_question(); }
       break;
     case 1:
-      if (option_4.text_content == ans){choose_question();}
+      if (option_4.text_content == ans) { choose_question(); }
       break;
     default:
       choose_question();
