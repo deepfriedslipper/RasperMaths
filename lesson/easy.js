@@ -12,6 +12,7 @@ const input_box = document.querySelector(".input-box");
 const submit = document.querySelector(".submit_button");
 
 var selection = null;
+var ans = null;
 
 function choose_question() {
   var num = Math.floor(Math.random() * 2);
@@ -71,10 +72,9 @@ function multiple_choice() {
       const lines = data.split('\n');
       lines.shift();
       const randomIndex = Math.floor(Math.random() * lines.length);
-      const randomLine = lines[randomIndex];
       lines.splice(randomIndex, 1);
+      const randomLine = lines[randomIndex];
       var array = randomLine.split(",");
-      console.log(array[0]);
       question.textContent = array[0];
 
       if (array[1] != 'null') {
@@ -86,6 +86,7 @@ function multiple_choice() {
       }
 
       array.splice(0, 2);
+      ans = array[0];
       array = shuffle(array);
       option_1.textContent = array[0];
       option_2.textContent = array[1];
@@ -165,5 +166,20 @@ option_4.onclick = function(){
 }
 
 submit.onclick = function(){
-  choose_question();
+  switch (selection){
+    case 1:
+      if (option_1.text_content == ans){choose_question();}
+      break;
+    case 2:
+      if (option_2.text_content == ans){choose_question();}
+      break;
+    case 3:
+      if (option_3.text_content == ans){choose_question();}
+      break;
+    case 1:
+      if (option_4.text_content == ans){choose_question();}
+      break;
+    default:
+      choose_question();
+  }
 }
