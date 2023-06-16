@@ -43,10 +43,8 @@ function input() {
       question.textContent = array[0];
 
       if (array[1] != 'null') {
-        console.log("Is not null");
         img.src = array[1];
       } else {
-        console.log("Is null");
         img.src = null;
       }
     })
