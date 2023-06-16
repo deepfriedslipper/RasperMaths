@@ -176,7 +176,7 @@ submit.onclick = function () {
     case 3:
       if (option_3.text_content == ans) { choose_question(); }
       break;
-    case 1:
+    case 4:
       if (option_4.text_content == ans) { choose_question(); }
       break;
     default:
