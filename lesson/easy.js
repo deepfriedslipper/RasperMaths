@@ -13,6 +13,7 @@ const submit = document.querySelector(".submit_button");
 
 var selection = null;
 var ans = null;
+var shuffled;
 
 function choose_question() {
   var num = Math.floor(Math.random() * 2);
@@ -86,11 +87,11 @@ function multiple_choice() {
 
       array.splice(0, 2);
       ans = array[0];
-      array = shuffle(array);
-      option_1.textContent = array[0];
-      option_2.textContent = array[1];
-      option_3.textContent = array[2];
-      option_4.textContent = array[3];
+      shuffled = shuffle(array);
+      option_1.textContent = shuffled[0];
+      option_2.textContent = shuffled[1];
+      option_3.textContent = shuffled[2];
+      option_4.textContent = shuffled[3];
     })
     .catch(error => {
       question.textContent = 'Error: ' + error;
