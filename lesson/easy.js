@@ -10,6 +10,7 @@ const option_4_wrapper = document.querySelector(".option4-wrapper");
 const img = document.querySelector(".question_img");
 const input_box = document.querySelector(".input-box");
 const submit = document.querySelector(".submit_button");
+const input_submit = document.querySelector(".input-submit");
 
 var selection = null;
 var ans = null;
@@ -26,10 +27,12 @@ function choose_question() {
 
 function input() {
   input_box.style.display = 'inline-block';
+  input_submit.style.display = 'block';
   option_1_wrapper.style.display = 'none';
   option_2_wrapper.style.display = 'none';
   option_3_wrapper.style.display = 'none';
   option_4_wrapper.style.display = 'none';
+  submit.style.display = 'none';
 
   fetch('easy.csv')
     .then(response => response.text())
@@ -40,22 +43,26 @@ function input() {
       const randomLine = lines[randomIndex];
       lines.splice(randomIndex, 1);
       var array = randomLine.split(",");
-      console.log(array[0]);
       question.textContent = array[0];
 
       if (array[1] != 'null') {
         img.src = array[1];
+        img.style.display = 'block';
       } else {
-        img.src = null;
+        img.style.display = 'none';
       }
+
+      ans = array[2];
+      console.log(ans);
     })
     .catch(error => {
-      question.textContent = 'Error: ' + error;
+      alert('Something has gone wrong. Try refreshing the page. ' + error);
     });
 }
 
 function multiple_choice() {
   input_box.style.display = 'none';
+  input_submit.style.display = 'none';
   option_1_wrapper.style.display = 'flex';
   option_2_wrapper.style.display = 'flex';
   option_3_wrapper.style.display = 'flex';
@@ -64,6 +71,7 @@ function multiple_choice() {
   option_2_wrapper.style.background = "white";
   option_3_wrapper.style.background = "white";
   option_4_wrapper.style.background = "white";
+  submit.style.display = 'block';
 
   fetch('easy_multiple_choice.csv')
     .then(response => response.text())
@@ -77,11 +85,9 @@ function multiple_choice() {
       question.textContent = array[0];
 
       if (array[1] != 'null') {
-        console.log("Is not null");
         img.src = array[1];
         img.style.display = 'block';
       } else {
-        console.log("Is null");
         img.style.display = 'none';
       }
 
@@ -94,7 +100,7 @@ function multiple_choice() {
       option_4.textContent = shuffled[3];
     })
     .catch(error => {
-      question.textContent = 'Error: ' + error;
+      alert('Something has gone wrong. Try refreshing the page. ' + error);
     });
 }
 
@@ -168,16 +174,20 @@ option_4.onclick = function () {
 submit.onclick = function () {
   switch (selection) {
     case 1:
-      if (option_1.text_content == ans) { choose_question(); }
+      if (option_1.innerHTML == ans) { choose_question(); }
+      else { console.log("INCORRECT!"); }
       break;
     case 2:
-      if (option_2.text_content == ans) { choose_question(); }
+      if (option_2.innerHTML == ans) { choose_question(); }
+      else { console.log("INCORRECT!"); }
       break;
     case 3:
-      if (option_3.text_content == ans) { choose_question(); }
+      if (option_3.innerHTML == ans) { choose_question(); }
+      else { console.log("INCORRECT!"); }
       break;
     case 4:
-      if (option_4.text_content == ans) { choose_question(); }
+      if (option_4.innerHTML == ans) { choose_question(); }
+      else { console.log("INCORRECT!"); }
       break;
     case null:
       choose_question();
@@ -185,4 +195,10 @@ submit.onclick = function () {
     default:
       choose_question();
   }
+}
+
+input_submit.onclick = function () {
+  console.log(input_box.value);
+  if (input_box.value == ans) { choose_question(); }
+  else { console.log("INCORRECT!"); }
 }
