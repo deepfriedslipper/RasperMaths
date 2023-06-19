@@ -11,12 +11,16 @@ const img = document.querySelector(".question_img");
 const input_box = document.querySelector(".input-box");
 const submit = document.querySelector(".submit_button");
 const input_submit = document.querySelector(".input-submit");
+const qcounter = document.querySelector(".question-counter");
 
 var selection = null;
 var ans = null;
 var shuffled;
+var qindex = 0;
 
 function choose_question() {
+  qindex++;
+  qcounter.innerHTML = qindex + '/10';
   var num = Math.floor(Math.random() * 2);
   if (num == 1) {
     multiple_choice();
@@ -37,12 +41,12 @@ function input() {
   fetch('easy.csv')
     .then(response => response.text())
     .then(data => {
-      const lines = data.split('\n');
+      var lines = data.split('\n');
       lines.shift();
-      const randomIndex = Math.floor(Math.random() * lines.length);
-      const randomLine = lines[randomIndex];
+      var randomIndex = Math.floor(Math.random() * lines.length);
+      var randomLine = lines[randomIndex];
       lines.splice(randomIndex, 1);
-      var array = randomLine.split(",");
+      var array = randomLine.split(',');
       question.textContent = array[0];
 
       if (array[1] != 'null') {
@@ -53,7 +57,6 @@ function input() {
       }
 
       ans = array[2];
-      console.log(ans);
     })
     .catch(error => {
       alert('Something has gone wrong. Try refreshing the page. ' + error);
@@ -76,11 +79,11 @@ function multiple_choice() {
   fetch('easy_multiple_choice.csv')
     .then(response => response.text())
     .then(data => {
-      const lines = data.split('\n');
+      var lines = data.split('\n');
       lines.shift();
-      const randomIndex = Math.floor(Math.random() * lines.length);
+      var randomIndex = Math.floor(Math.random() * lines.length);
       lines.splice(randomIndex, 1);
-      const randomLine = lines[randomIndex];
+      var randomLine = lines[randomIndex];
       var array = randomLine.split(",");
       question.textContent = array[0];
 
@@ -105,6 +108,9 @@ function multiple_choice() {
 }
 
 function begin_easy() {
+  for (let i = 0; i < 10; i++) {
+    console.log(i);
+  }
   choose_question();
 }
 
@@ -198,7 +204,9 @@ submit.onclick = function () {
 }
 
 input_submit.onclick = function () {
-  console.log(input_box.value);
-  if (input_box.value == ans) { choose_question(); }
+  if (input_box.value == ans) {
+    input_box.value = '';
+    choose_question();
+  }
   else { console.log("INCORRECT!"); }
 }
