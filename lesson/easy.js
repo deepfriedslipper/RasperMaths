@@ -23,9 +23,33 @@ function choose_question() {
   qcounter.innerHTML = qindex + '/10';
   var num = Math.floor(Math.random() * 2);
   if (num == 1) {
-    multiple_choice();
+    fetch('easy_multiple_choice.csv')
+      .then(response => response.text())
+      .then(data => {
+        var lines = data.split('\n');
+        lines.shift();
+        var randomIndex = Math.floor(Math.random() * lines.length);
+        var randomLine = lines[randomIndex];
+        lines.splice(randomIndex, 1);
+        return (randomLine);
+      })
+      .catch(error => {
+        alert('Something has gone wrong. Try refreshing the page.\n\n' + error);
+      });
   } else {
-    input();
+    fetch('easy.csv')
+      .then(response => response.text())
+      .then(data => {
+        var lines = data.split('\n');
+        lines.shift();
+        var randomIndex = Math.floor(Math.random() * lines.length);
+        var randomLine = lines[randomIndex];
+        lines.splice(randomIndex, 1);
+        return (randomLine);
+      })
+      .catch(error => {
+        alert('Something has gone wrong. Try refreshing the page. ' + error);
+      });
   }
 }
 
@@ -38,29 +62,17 @@ function input() {
   option_4_wrapper.style.display = 'none';
   submit.style.display = 'none';
 
-  fetch('easy.csv')
-    .then(response => response.text())
-    .then(data => {
-      var lines = data.split('\n');
-      lines.shift();
-      var randomIndex = Math.floor(Math.random() * lines.length);
-      var randomLine = lines[randomIndex];
-      lines.splice(randomIndex, 1);
-      var array = randomLine.split(',');
-      question.textContent = array[0];
+  question.textContent = array[0];
 
-      if (array[1] != 'null') {
-        img.src = array[1];
-        img.style.display = 'block';
-      } else {
-        img.style.display = 'none';
-      }
+  if (array[1] != 'null') {
+    img.src = array[1];
+    img.style.display = 'block';
+  } else {
+    img.style.display = 'none';
+  }
 
-      ans = array[2];
-    })
-    .catch(error => {
-      alert('Something has gone wrong. Try refreshing the page. ' + error);
-    });
+  ans = array[2];
+
 }
 
 function multiple_choice() {
@@ -76,42 +88,30 @@ function multiple_choice() {
   option_4_wrapper.style.background = "white";
   submit.style.display = 'block';
 
-  fetch('easy_multiple_choice.csv')
-    .then(response => response.text())
-    .then(data => {
-      var lines = data.split('\n');
-      lines.shift();
-      var randomIndex = Math.floor(Math.random() * lines.length);
-      lines.splice(randomIndex, 1);
-      var randomLine = lines[randomIndex];
-      var array = randomLine.split(",");
-      question.textContent = array[0];
+  question.textContent = array[0];
 
-      if (array[1] != 'null') {
-        img.src = array[1];
-        img.style.display = 'block';
-      } else {
-        img.style.display = 'none';
-      }
+  if (array[1] != 'null') {
+    img.src = array[1];
+    img.style.display = 'block';
+  } else {
+    img.style.display = 'none';
+  }
 
-      array.splice(0, 2);
-      ans = array[0];
-      shuffled = shuffle(array);
-      option_1.textContent = shuffled[0];
-      option_2.textContent = shuffled[1];
-      option_3.textContent = shuffled[2];
-      option_4.textContent = shuffled[3];
-    })
-    .catch(error => {
-      alert('Something has gone wrong. Try refreshing the page. ' + error);
-    });
+  array.splice(0, 2);
+  ans = array[0];
+  shuffled = shuffle(array);
+  option_1.textContent = shuffled[0];
+  option_2.textContent = shuffled[1];
+  option_3.textContent = shuffled[2];
+  option_4.textContent = shuffled[3];
 }
 
 function begin_easy() {
-  for (let i = 0; i < 10; i++) {
-    console.log(i);
-  }
-  choose_question();
+  var questions;
+
+  for (var i = 0; i < 10; i++) { questions.push(choose_question); }
+
+  question.innerHTML = questions;
 }
 
 function shuffle(a) {
