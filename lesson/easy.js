@@ -107,11 +107,12 @@ function multiple_choice() {
 }
 
 function begin_easy() {
-  var questions;
+  var questions = [];
 
-  for (var i = 0; i < 10; i++) { questions.push(choose_question); }
+  for (let i = 0; i < 10; i++) {
+    console.log(i);
+  }
 
-  question.innerHTML = questions;
 }
 
 function shuffle(a) {
