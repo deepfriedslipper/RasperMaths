@@ -108,11 +108,19 @@ function multiple_choice() {
 
 function begin_easy() {
   var questions = [];
-  var ten = 5+5;
 
-  for (let i = 0; i < ten; i++) {
-    question.textContent = i;
-  }
+  questions.push(choose_question());
+  questions.push(choose_question());
+  questions.push(choose_question());
+  questions.push(choose_question());
+  questions.push(choose_question());
+  questions.push(choose_question());
+  questions.push(choose_question());
+  questions.push(choose_question());
+  questions.push(choose_question());
+  questions.push(choose_question());
+
+  console.log(questions);
 
 }
 
