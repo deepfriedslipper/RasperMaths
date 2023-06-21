@@ -111,7 +111,7 @@ function begin_easy() {
   var ten = 5+5;
 
   for (let i = 0; i < ten; i++) {
-    console.log(i);
+    question.textContent = i;
   }
 
 }
