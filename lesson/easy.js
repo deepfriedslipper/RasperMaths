@@ -108,8 +108,9 @@ function multiple_choice() {
 
 function begin_easy() {
   var questions = [];
+  var ten = 5+5;
 
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < ten; i++) {
     console.log(i);
   }
 
