@@ -121,7 +121,6 @@ function begin_easy() {
   questions.push(choose_question());
 
   console.log(questions);
-
 }
 
 function shuffle(a) {
