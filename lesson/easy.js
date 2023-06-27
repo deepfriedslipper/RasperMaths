@@ -109,6 +109,8 @@ function multiple_choice() {
 function begin_easy() {
   var questions = [];
 
+  console.log(choose_question());
+
   questions.push(choose_question());
   questions.push(choose_question());
   questions.push(choose_question());
