@@ -137,8 +137,13 @@ html {
   border-top: 1px rgb(226, 226, 226) solid;
 }
 
+.search-wrapper {
+  height: 37.33px !important;
+}
+
 .searchbar {
   width: 200px !important;
+  height: 37.33px !important;
   transition: width 300ms ease !important;
 }
 
@@ -154,8 +159,8 @@ html {
 .search-icon {
   visibility: hidden;
   position: absolute;
-  width: 38px;
-  height: 38px;
+  width: 38px !important;
+  height: 38px !important;
   transform: translateY(-100%);
 }
 
