@@ -122,7 +122,7 @@ function begin_easy() {
   questions.push(choose_question());
   questions.push(choose_question());
 
-  console.log(questions);
+  question.textContent = questions;
 }
 
 function shuffle(a) {
