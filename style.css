@@ -159,8 +159,8 @@ html {
 .search-icon {
   visibility: hidden;
   position: absolute;
-  width: 38px !important;
-  height: 38px !important;
+  width: 37px !important;
+  height: 37px !important;
   transform: translateY(-100%);
 }
 
