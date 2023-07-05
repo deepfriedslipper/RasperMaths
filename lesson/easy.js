@@ -12,48 +12,79 @@ const input_box = document.querySelector(".input-box");
 const submit = document.querySelector(".submit_button");
 const input_submit = document.querySelector(".input-submit");
 const qcounter = document.querySelector(".question-counter");
+const dropdown = document.querySelector(".difficulty-dropdown");
 
 var selection = null;
 var ans = null;
 var shuffled;
-var qindex = 0;
+var submitted = false;
 
 function choose_question() {
-  qindex++;
-  qcounter.innerHTML = qindex + '/10';
   var num = Math.floor(Math.random() * 2);
+  var file;
+
   if (num == 1) {
-    fetch('easy_multiple_choice.csv')
-      .then(response => response.text())
-      .then(data => {
-        var lines = data.split('\n');
-        lines.shift();
-        var randomIndex = Math.floor(Math.random() * lines.length);
-        var randomLine = lines[randomIndex];
-        lines.splice(randomIndex, 1);
-        return (randomLine);
-      })
-      .catch(error => {
-        alert('Something has gone wrong. Try refreshing the page.\n\n' + error);
-      });
+    file = 'easy_multiple_choice.csv';
   } else {
-    fetch('easy.csv')
-      .then(response => response.text())
-      .then(data => {
-        var lines = data.split('\n');
-        lines.shift();
-        var randomIndex = Math.floor(Math.random() * lines.length);
-        var randomLine = lines[randomIndex];
-        lines.splice(randomIndex, 1);
-        return (randomLine);
-      })
-      .catch(error => {
-        alert('Something has gone wrong. Try refreshing the page. ' + error);
-      });
+    file = 'easy.csv';
   }
+
+  return fetch(file)
+    .then(response => response.text())
+    .then(data => {
+      var lines = data.split('\n');
+      lines.shift();
+      var randomIndex = Math.floor(Math.random() * lines.length);
+      var randomLine = lines[randomIndex];
+      lines.splice(randomIndex, 1);
+      return randomLine;
+    })
+    .catch(error => {
+      alert('Something has gone wrong. Try refreshing the page.\n\n' + error);
+    });
 }
 
-function input() {
+function begin_easy() {
+  dropdown.style.display = 'none';
+  submitted = false;
+  var promises = [];
+
+  for (var i = 0; i < 10; i++) {
+    promises.push(choose_question());
+  }
+
+  Promise.all(promises)
+    .then(async results => {
+      var questions = results.filter(question => question !== undefined);
+      for (var i = 0; i < 10; i++) {
+        submitted = false;
+        qcounter.innerHTML = (i + 1) + '/10';
+        var firstCharacter = questions[i][0];
+        if (firstCharacter === '1') {
+          multiple_choice(questions[i]);
+          await waitForSubmitted();
+        } else {
+          input(questions[i]);
+          await waitForSubmitted();
+        }
+      }
+      input_box.style.display = 'none';
+      input_submit.style.display = 'none';
+      option_1_wrapper.style.display = 'none';
+      option_2_wrapper.style.display = 'none';
+      option_3_wrapper.style.display = 'none';
+      option_4_wrapper.style.display = 'none';
+      submit.style.display = 'none';
+      img.style.display = 'none';
+      qcounter.style.display = 'none';
+
+      question.textContent = 'COMPLETED';
+    });
+}
+
+
+
+function input(q) {
   input_box.style.display = 'inline-block';
   input_submit.style.display = 'block';
   option_1_wrapper.style.display = 'none';
@@ -62,6 +93,7 @@ function input() {
   option_4_wrapper.style.display = 'none';
   submit.style.display = 'none';
 
+  array = q.split(',');
   question.textContent = array[0];
 
   if (array[1] != 'null') {
@@ -72,10 +104,9 @@ function input() {
   }
 
   ans = array[2];
-
 }
 
-function multiple_choice() {
+function multiple_choice(q) {
   input_box.style.display = 'none';
   input_submit.style.display = 'none';
   option_1_wrapper.style.display = 'flex';
@@ -88,7 +119,8 @@ function multiple_choice() {
   option_4_wrapper.style.background = "white";
   submit.style.display = 'block';
 
-  question.textContent = array[0];
+  array = q.split(',')
+  question.textContent = array[0].substring(1);
 
   if (array[1] != 'null') {
     img.src = array[1];
@@ -106,25 +138,6 @@ function multiple_choice() {
   option_4.textContent = shuffled[3];
 }
 
-function begin_easy() {
-  var questions = [];
-
-  console.log(choose_question());
-
-  questions.push(choose_question());
-  questions.push(choose_question());
-  questions.push(choose_question());
-  questions.push(choose_question());
-  questions.push(choose_question());
-  questions.push(choose_question());
-  questions.push(choose_question());
-  questions.push(choose_question());
-  questions.push(choose_question());
-  questions.push(choose_question());
-
-  question.textContent = questions;
-}
-
 function shuffle(a) {
   var j, x, i;
   for (i = a.length - 1; i > 0; i--) {
@@ -134,6 +147,17 @@ function shuffle(a) {
     a[j] = x;
   }
   return a;
+}
+
+function waitForSubmitted() {
+  return new Promise(resolve => {
+    const interval = setInterval(() => {
+      if (submitted) {
+        clearInterval(interval);
+        resolve();
+      }
+    }, 100);
+  });
 }
 
 option_1.onclick = function () {
@@ -191,33 +215,33 @@ option_4.onclick = function () {
 submit.onclick = function () {
   switch (selection) {
     case 1:
-      if (option_1.innerHTML == ans) { choose_question(); }
+      if (option_1.innerHTML == ans) { submitted = true; }
       else { console.log("INCORRECT!"); }
       break;
     case 2:
-      if (option_2.innerHTML == ans) { choose_question(); }
+      if (option_2.innerHTML == ans) { submitted = true; }
       else { console.log("INCORRECT!"); }
       break;
     case 3:
-      if (option_3.innerHTML == ans) { choose_question(); }
+      if (option_3.innerHTML == ans) { submitted = true; }
       else { console.log("INCORRECT!"); }
       break;
     case 4:
-      if (option_4.innerHTML == ans) { choose_question(); }
+      if (option_4.innerHTML == ans) { submitted = true; }
       else { console.log("INCORRECT!"); }
       break;
     case null:
-      choose_question();
+      submitted = true;
       break;
     default:
-      choose_question();
+      submitted = true;
   }
 }
 
 input_submit.onclick = function () {
   if (input_box.value == ans) {
     input_box.value = '';
-    choose_question();
+    submitted = true;
   }
   else { console.log("INCORRECT!"); }
 }
