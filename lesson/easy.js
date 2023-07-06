@@ -120,9 +120,7 @@ function multiple_choice(q) {
   if (array[1] != 'null') {
     img.src = array[1];
     img.style.display = 'block';
-  } else {
-    img.style.display = 'none';
-  }
+  } else { img.style.display = 'none'; }
 
   array.splice(0, 2);
   ans = array[0];
@@ -237,6 +235,5 @@ input_submit.onclick = function () {
   if (input_box.value == ans) {
     input_box.value = '';
     submitted = true;
-  }
-  else { console.log("INCORRECT!"); }
+  } else { console.log("INCORRECT!"); }
 }
