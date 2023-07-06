@@ -46,9 +46,7 @@ function begin_easy() {
   submitted = false;
   var promises = [];
 
-  for (var i = 0; i < 10; i++) {
-    promises.push(choose_question());
-  }
+  for (var i = 0; i < 10; i++) { promises.push(choose_question()); }
 
   Promise.all(promises)
     .then(async results => {
