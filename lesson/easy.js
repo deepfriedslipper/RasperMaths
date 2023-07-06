@@ -167,21 +167,10 @@ function handleOptionClick(optionNumber) {
   }
 }
 
-option_1.onclick = function () {
-  handleOptionClick(1);
-};
-
-option_2.onclick = function () {
-  handleOptionClick(2);
-};
-
-option_3.onclick = function () {
-  handleOptionClick(3);
-};
-
-option_4.onclick = function () {
-  handleOptionClick(4);
-};
+option_1.onclick = function () { handleOptionClick(1); };
+option_2.onclick = function () { handleOptionClick(2); };
+option_3.onclick = function () { handleOptionClick(3); };
+option_4.onclick = function () { handleOptionClick(4); };
 
 submit.onclick = function () {
   switch (selection) {
