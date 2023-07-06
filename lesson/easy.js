@@ -13,7 +13,6 @@ const submit = document.querySelector(".submit_button");
 const input_submit = document.querySelector(".input-submit");
 const qcounter = document.querySelector(".question-counter");
 const dropdown = document.querySelector(".difficulty-dropdown");
-const input_group = document.querySelector("input-group");
 
 let selection = null;
 let ans = null;
@@ -64,7 +63,8 @@ function begin_easy() {
           await waitForSubmitted();
         }
       }
-      input_group.style.display = 'none';
+      input_box.style.display = 'none';
+      input_submit.style.display = 'none';
       option_1_wrapper.style.display = 'none';
       option_2_wrapper.style.display = 'none';
       option_3_wrapper.style.display = 'none';
@@ -80,7 +80,8 @@ function begin_easy() {
 
 
 function input(q) {
-  input_group.style.display = 'block';
+  input_box.style.display = 'inline-block';
+  input_submit.style.display = 'inline-block';
   option_1_wrapper.style.display = 'none';
   option_2_wrapper.style.display = 'none';
   option_3_wrapper.style.display = 'none';
@@ -101,7 +102,8 @@ function input(q) {
 }
 
 function multiple_choice(q) {
-  input_group.style.display = 'none';
+  input_box.style.display = 'none';
+  input_submit.style.display = 'none';
   option_1_wrapper.style.display = 'flex';
   option_2_wrapper.style.display = 'flex';
   option_3_wrapper.style.display = 'flex';
