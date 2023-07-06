@@ -151,57 +151,37 @@ function waitForSubmitted() {
   });
 }
 
-option_1.onclick = function () {
-  if (selection == 1) {
+function handleOptionClick(optionNumber) {
+  if (selection === optionNumber) {
     selection = null;
-    option_1_wrapper.style.background = "white";
+    option_1_wrapper.style.background = 'white';
+    option_2_wrapper.style.background = 'white';
+    option_3_wrapper.style.background = 'white';
+    option_4_wrapper.style.background = 'white';
   } else {
-    selection = 1;
-    option_1_wrapper.style.background = "red";
-    option_2_wrapper.style.background = "white";
-    option_3_wrapper.style.background = "white";
-    option_4_wrapper.style.background = "white";
+    selection = optionNumber;
+    option_1_wrapper.style.background = optionNumber === 1 ? 'red' : 'white';
+    option_2_wrapper.style.background = optionNumber === 2 ? 'red' : 'white';
+    option_3_wrapper.style.background = optionNumber === 3 ? 'red' : 'white';
+    option_4_wrapper.style.background = optionNumber === 4 ? 'red' : 'white';
   }
 }
+
+option_1.onclick = function () {
+  handleOptionClick(1);
+};
 
 option_2.onclick = function () {
-  if (selection == 2) {
-    selection = null;
-    option_2_wrapper.style.background = "white";
-  } else {
-    selection = 2;
-    option_1_wrapper.style.background = "white";
-    option_2_wrapper.style.background = "red";
-    option_3_wrapper.style.background = "white";
-    option_4_wrapper.style.background = "white";
-  }
-}
+  handleOptionClick(2);
+};
 
 option_3.onclick = function () {
-  if (selection == 3) {
-    selection = null;
-    option_3_wrapper.style.background = "white";
-  } else {
-    selection = 3;
-    option_1_wrapper.style.background = "white";
-    option_2_wrapper.style.background = "white";
-    option_3_wrapper.style.background = "red";
-    option_4_wrapper.style.background = "white";
-  }
-}
+  handleOptionClick(3);
+};
 
 option_4.onclick = function () {
-  if (selection == 4) {
-    selection = null;
-    option_4_wrapper.style.background = "white";
-  } else {
-    selection = 4;
-    option_1_wrapper.style.background = "white";
-    option_2_wrapper.style.background = "white";
-    option_3_wrapper.style.background = "white";
-    option_4_wrapper.style.background = "red";
-  }
-}
+  handleOptionClick(4);
+};
 
 submit.onclick = function () {
   switch (selection) {
