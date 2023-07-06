@@ -23,11 +23,8 @@ function choose_question() {
   var num = Math.floor(Math.random() * 2);
   var file;
 
-  if (num == 1) {
-    file = 'easy_multiple_choice.csv';
-  } else {
-    file = 'easy.csv';
-  }
+  if (num == 1) { file = 'easy_multiple_choice.csv'; }
+  else { file = 'easy.csv'; }
 
   return fetch(file)
     .then(response => response.text())
