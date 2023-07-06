@@ -15,10 +15,10 @@ const qcounter = document.querySelector(".question-counter");
 const dropdown = document.querySelector(".difficulty-dropdown");
 const input_group = document.querySelector("input-group");
 
-var selection = null;
-var ans = null;
-var shuffled;
-var submitted = false;
+let selection = null;
+let ans = null;
+let shuffled;
+let submitted = false;
 
 function choose_question() {
   var num = Math.floor(Math.random() * 2);
