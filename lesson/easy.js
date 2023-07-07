@@ -18,6 +18,8 @@ let selection = null;
 let ans = null;
 let shuffled;
 let submitted = false;
+let score;
+let attempt;
 
 function choose_question() {
   var num = Math.floor(Math.random() * 2);
@@ -42,6 +44,7 @@ function choose_question() {
 }
 
 function begin_easy() {
+  score = 0;
   dropdown.style.display = 'none';
   submitted = false;
   var promises = [];
@@ -56,6 +59,7 @@ function begin_easy() {
         qcounter.innerHTML = (i + 1) + '/10';
         var firstCharacter = questions[i][0];
         if (firstCharacter === '1') {
+          attempt = 1;
           multiple_choice(questions[i]);
           await waitForSubmitted();
         } else {
@@ -63,6 +67,7 @@ function begin_easy() {
           await waitForSubmitted();
         }
       }
+
       input_box.style.display = 'none';
       input_submit.style.display = 'none';
       option_1_wrapper.style.display = 'none';
@@ -94,9 +99,7 @@ function input(q) {
   if (array[1] != 'null') {
     img.src = array[1];
     img.style.display = 'block';
-  } else {
-    img.style.display = 'none';
-  }
+  } else { img.style.display = 'none'; }
 
   ans = array[2];
 }
@@ -177,26 +180,57 @@ option_4.onclick = function () { handleOptionClick(4); };
 submit.onclick = function () {
   switch (selection) {
     case 1:
-      if (option_1.innerHTML == ans) { submitted = true; }
-      else { console.log("INCORRECT!"); }
+      if (option_1.innerHTML == ans) {
+        console.log("CORRECT!");
+        submitted = true;
+        score++;
+      }
+      else {
+        console.log("INCORRECT!");
+        if (attempt >= 2) { submitted = true; }
+        else { attempt++; }
+      }
       break;
     case 2:
-      if (option_2.innerHTML == ans) { submitted = true; }
-      else { console.log("INCORRECT!"); }
+      if (option_2.innerHTML == ans) {
+        console.log("CORRECT!");
+        submitted = true;
+        score++;
+      }
+      else {
+        console.log("INCORRECT!");
+        if (attempt >= 2) { submitted = true; }
+        else { attempt++; }
+      }
       break;
     case 3:
-      if (option_3.innerHTML == ans) { submitted = true; }
-      else { console.log("INCORRECT!"); }
+      if (option_3.innerHTML == ans) {
+        console.log("CORRECT!");
+        submitted = true;
+        score++;
+      }
+      else {
+        console.log("INCORRECT!");
+        if (attempt >= 2) { submitted = true; }
+        else { attempt++; }
+      }
       break;
     case 4:
-      if (option_4.innerHTML == ans) { submitted = true; }
-      else { console.log("INCORRECT!"); }
+      if (option_4.innerHTML == ans) {
+        console.log("CORRECT!");
+        submitted = true;
+        score++;
+      }
+      else {
+        console.log("INCORRECT!");
+        if (attempt >= 2) { submitted = true; }
+        else { attempt++; }
+      }
       break;
     case null:
-      submitted = true;
       break;
     default:
-      submitted = true;
+      console.log("INCORRECT!");
   }
 }
 
