@@ -13,6 +13,10 @@ const submit = document.querySelector(".submit_button");
 const input_submit = document.querySelector(".input-submit");
 const qcounter = document.querySelector(".question-counter");
 const dropdown = document.querySelector(".difficulty-dropdown");
+const wrong = document.querySelector(".wrong-content");
+const correct = document.querySelector(".correct-content");
+const wrong_wrapper = document.querySelector(".alert-danger");
+const correct_wrapper = document.querySelector(".alert-success");
 
 let selection = null;
 let ans = null;
@@ -78,7 +82,7 @@ function begin_easy() {
       img.style.display = 'none';
       qcounter.style.display = 'none';
 
-      question.textContent = 'COMPLETED';
+      question.textContent = 'COMPLETED ' + score + '/10';
     });
 }
 
@@ -181,9 +185,10 @@ submit.onclick = function () {
   switch (selection) {
     case 1:
       if (option_1.innerHTML == ans) {
-        console.log("CORRECT!");
-        submitted = true;
+        correct.textContent = "Correct!";
+        correct_wrapper.style.display = "block";
         score++;
+        submitted = true;
       }
       else {
         console.log("INCORRECT!");
@@ -193,7 +198,8 @@ submit.onclick = function () {
       break;
     case 2:
       if (option_2.innerHTML == ans) {
-        console.log("CORRECT!");
+        correct.textContent = "Correct!";
+        correct_wrapper.style.display = "block";
         submitted = true;
         score++;
       }
@@ -205,7 +211,8 @@ submit.onclick = function () {
       break;
     case 3:
       if (option_3.innerHTML == ans) {
-        console.log("CORRECT!");
+        correct.textContent = "Correct!";
+        correct_wrapper.style.display = "block";
         submitted = true;
         score++;
       }
@@ -217,7 +224,8 @@ submit.onclick = function () {
       break;
     case 4:
       if (option_4.innerHTML == ans) {
-        console.log("CORRECT!");
+        correct.textContent = "Correct!";
+        correct_wrapper.style.display = "block";
         submitted = true;
         score++;
       }
@@ -238,5 +246,9 @@ input_submit.onclick = function () {
   if (input_box.value == ans) {
     input_box.value = '';
     submitted = true;
-  } else { console.log("INCORRECT!"); }
+    score++;
+  } else {
+    if (attempt >= 2) { submitted = true; }
+    else { attempt++; }
+  }
 }
