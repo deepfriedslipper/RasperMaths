@@ -186,7 +186,7 @@ submit.onclick = function () {
     case 1:
       if (option_1.innerHTML == ans) {
         correct.textContent = "Correct!";
-        correct_wrapper.style.display = "block";
+        correct_wrapper.style = "display: block !important";
         score++;
         submitted = true;
       }
@@ -199,7 +199,7 @@ submit.onclick = function () {
     case 2:
       if (option_2.innerHTML == ans) {
         correct.textContent = "Correct!";
-        correct_wrapper.style.display = "block";
+        correct_wrapper.style = "display: block !important";
         submitted = true;
         score++;
       }
@@ -212,7 +212,7 @@ submit.onclick = function () {
     case 3:
       if (option_3.innerHTML == ans) {
         correct.textContent = "Correct!";
-        correct_wrapper.style.display = "block";
+        correct_wrapper.style = "display: block !important";
         submitted = true;
         score++;
       }
@@ -225,7 +225,7 @@ submit.onclick = function () {
     case 4:
       if (option_4.innerHTML == ans) {
         correct.textContent = "Correct!";
-        correct_wrapper.style.display = "block";
+        correct_wrapper.style = "display: block !important";
         submitted = true;
         score++;
       }
