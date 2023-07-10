@@ -1,5 +1,5 @@
 const question = document.querySelector(".question_title");
-const option_1 = document.querySelector(".option1");
+const option_1 = document.querySelector(".option1")1`
 const option_2 = document.querySelector(".option2");
 const option_3 = document.querySelector(".option3");
 const option_4 = document.querySelector(".option4");
