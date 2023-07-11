@@ -241,7 +241,7 @@ submit.onclick = function () {
       console.log("INCORRECT!");
   }
 }
-
+//multiple choice questions are the main issue with why it is so big, as you are operating of of this system. this is impossible to translate without breaking. sorry.
 input_submit.onclick = function () {
   if (input_box.value == ans) {
     input_box.value = '';
