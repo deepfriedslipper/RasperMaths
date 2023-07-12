@@ -187,6 +187,9 @@ submit.onclick = function () {
       if (option_1.innerHTML == ans) {
         correct.textContent = "Correct!";
         correct_wrapper.style = "display: block !important";
+        setTimeout(function () {
+          correct_wrapper.style = "display: none !important"
+        }, 2000);
         score++;
         submitted = true;
       }
@@ -200,6 +203,9 @@ submit.onclick = function () {
       if (option_2.innerHTML == ans) {
         correct.textContent = "Correct!";
         correct_wrapper.style = "display: block !important";
+        setTimeout(function () {
+          correct_wrapper.style = "display: none !important"
+        }, 2000);
         submitted = true;
         score++;
       }
@@ -213,6 +219,9 @@ submit.onclick = function () {
       if (option_3.innerHTML == ans) {
         correct.textContent = "Correct!";
         correct_wrapper.style = "display: block !important";
+        setTimeout(function () {
+          correct_wrapper.style = "display: none !important"
+        }, 2000);
         submitted = true;
         score++;
       }
@@ -226,6 +235,9 @@ submit.onclick = function () {
       if (option_4.innerHTML == ans) {
         correct.textContent = "Correct!";
         correct_wrapper.style = "display: block !important";
+        setTimeout(function () {
+          correct_wrapper.style = "display: none !important"
+        }, 2000);
         submitted = true;
         score++;
       }
@@ -241,7 +253,7 @@ submit.onclick = function () {
       console.log("INCORRECT!");
   }
 }
-//multiple choice questions are the main issue with why it is so big, as you are operating of of this system. this is impossible to translate without breaking. sorry.
+
 input_submit.onclick = function () {
   if (input_box.value == ans) {
     input_box.value = '';
