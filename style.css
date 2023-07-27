@@ -1,5 +1,6 @@
 :root {
   --danger: #dc3545;
+  --dark-danger: #a71b29;
 }
 
 body,
@@ -8,6 +9,7 @@ html {
   padding: 0;
   display: block;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 .sidebar {
@@ -36,6 +38,26 @@ html {
   height: 100%;
 }
 
+.cell {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  background: rgb(206, 206, 206);
+  counter-increment: gallery-cell;
+}
+
+.rs-dropdown-link:not(.rs-dropdown-link:hover) {
+  background: white !important;
+}
+
+.rs-dropdown-link:not(.rs-dropdown-link:hover) button {
+  color: black !important;
+}
+
+.rs-dropdown-link:not(.rs-dropdown-link:hover) small {
+  background: white !important;
+  color: black !important;
+}
 
 .sidebar-toggle:focus {
   outline: 2px solid var(--danger) !important;
@@ -44,10 +66,6 @@ html {
 .logo {
   margin-block: -20px;
   transform: translateY(8%);
-}
-
-input[type="text"]:focus {
-  outline: var(--danger) 1px solid !important;
 }
 
 .required::after {
@@ -63,9 +81,16 @@ input[type="text"]:focus {
   -ms-user-select: none;
 }
 
+.rm-breadcrumb-item::after {
+  content: '>';
+  padding: 5px;
+  font-weight: bold;
+  color: rgb(115, 115, 115)
+}
+
 .login-section {
   width: 80%;
-  padding: 4rem;
+  padding: 3rem;
 }
 
 .lesson-container {
@@ -95,58 +120,6 @@ input[type="text"]:focus {
   display: inline-block;
 }
 
-.school {
-  width: 100%;
-  padding: 0.75rem;
-  border-radius: 8px;
-  transition: margin-bottom 300ms ease-in-out;
-}
-
-.school:focus {
-  margin-bottom: 200px !important;
-}
-
-.auto-complete-box {
-  position: absolute;
-  background: white;
-  margin-bottom: 2rem;
-  border-radius: 10px;
-  max-height: 0px;
-  overflow-y: scroll;
-  pointer-events: none;
-  transition: max-height 300ms ease-in-out, transform 300ms ease-in-out;
-  transform: translateY(15px);
-}
-
-.school:focus+.auto-complete-box {
-  max-height: 180px;
-  pointer-events: all;
-  padding: 0.5rem;
-  transform: translateY(-190px);
-}
-
-.school:focus+.auto-complete-box>li {
-  display: block;
-}
-
-.auto-complete-box li {
-  list-style: none;
-  padding: 0.5rem;
-  border-radius: 5px;
-  display: none;
-}
-
-.auto-complete-box li:hover {
-  background-color: var(--danger);
-  cursor: pointer;
-  color: white;
-}
-
-.not-listed:hover {
-  background: none !important;
-  color: black !important;
-}
-
 .topic-card {
   background-color: rgb(255, 250, 250);
   padding: 1em;
@@ -160,8 +133,17 @@ input[type="text"]:focus {
   height: 50px;
 }
 
+.tests {
+  border-top: 1px rgb(226, 226, 226) solid;
+}
+
+.search-wrapper {
+  height: 37.33px !important;
+}
+
 .searchbar {
   width: 200px !important;
+  height: 37.33px !important;
   transition: width 300ms ease !important;
 }
 
@@ -177,8 +159,8 @@ input[type="text"]:focus {
 .search-icon {
   visibility: hidden;
   position: absolute;
-  width: 38px;
-  height: 38px;
+  width: 37px !important;
+  height: 37px !important;
   transform: translateY(-100%);
 }
 
@@ -228,11 +210,6 @@ input[type="text"]:focus {
     margin: 0.5rem;
     width: calc(100% - 1rem) !important;
   }
-
-  .home-nav-item,
-  .login {
-    display: none !important;
-  }
 }
 
 /* Medium */
@@ -242,10 +219,6 @@ input[type="text"]:focus {
     margin: 0.5rem;
     width: calc(50% - 1rem) !important;
   }
-
-  .login {
-    display: inline-flex !important;
-  }
 }
 
 /* Large */
@@ -254,11 +227,6 @@ input[type="text"]:focus {
   .subtopic {
     margin: 0.5rem;
     width: calc(33% - 1rem) !important;
-  }
-
-  .home-nav-item,
-  .login {
-    display: inline-flex !important;
   }
 
   .login-section {

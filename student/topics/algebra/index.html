@@ -5,21 +5,21 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | Rasper Maths</title>
+  <title>Choose lesson | Rasper Maths</title>
 
   <!--FAVICON-->
   <link rel="icon" type="image/png" href="/assets/favicon.png">
 
-  <!-- BOOTSTRAP ICONS -->
+  <!--BOOTSTRAP ICONS-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 
-  <!-- CSS -->
+  <!--CSS-->
   <link rel="stylesheet" type="text/css" href="/style.css">
 
-  <!-- BOOTSTRAP STYLES -->
+  <!--BOOTSTRAP STYLES-->
   <link href="/css/main.min.css" rel="stylesheet">
 
-  <!-- BOOTSTRAP SCRIPTS -->
+  <!--BOOTSTRAP SCRIPTS-->
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
@@ -42,7 +42,7 @@
           </button>
         </form>
         <ul class="nav list d-flex align-items-center">
-          <a href="../topics" class="text-decoration-none text-muted mx-2 nav-element">Lessons</a>
+          <a href="/student/topics" class="text-decoration-none text-muted mx-2 nav-element">Lessons</a>
           <a href="#" class="text-decoration-none text-muted mx-2 nav-element">Tasks</a>
           <a href="#" class="text-decoration-none text-muted mx-2 nav-element">Revision</a>
         </ul>
@@ -76,7 +76,7 @@
                 <span>0 gold</span>
               </li>
               <li>
-                <a class="dropdown-item" href="#">Achievements</a>
+                <a class="dropdown-item" href="/student/achievements">Achievements</a>
               </li>
               <li>
                 <a class="dropdown-item" href="#">My statistics</a>
@@ -88,7 +88,7 @@
                 <a class="dropdown-item" href="#">Profile</a>
               </li>
               <li>
-                <a class="dropdown-item" href="#">Contact us</a>
+                <a class="dropdown-item" href="/contact">Contact us</a>
               </li>
               <li>
                 <hr class="dropdown-divider">
@@ -101,81 +101,83 @@
 
     </header>
   </div>
+
   <main>
     <div class="container">
-      <h1>Achievements</h1>
-      <p>Fulfill the requirement for each achievement to earn a reward. The harder the achievement, the more gold you
-        earn.</p>
-      <div class="row text-center">
-        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-          <img src="/assets/achievements/icon-perfect-score.png" class="w-100 p-3">
-          <span>Perfect Score<br><small class="text-muted">Complete a perfect lesson</small>
-          </span>
-          <div>0/1</div>
+      <section class="topics">
+        <div class="container my-5">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb p-3 bg-body-tertiary border-bottom">
+              <li class="me-3">
+                <a class="link-body-emphasis" href="/student">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house"
+                    viewBox="0 0 16 16">
+                    <path
+                      d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z" />
+                  </svg>
+                  <span class="visually-hidden">Home</span>
+                </a>
+              </li>
+              <li class="rm-breadcrumb-item">
+                <a class="link-body-emphasis fw-semibold text-decoration-none" href="/student/topics">Topics</a>
+              </li>
+              <li>
+                Algebra
+              </li>
+            </ol>
+          </nav>
         </div>
-
-        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-          <img src="/assets/achievements/icon-perfect-streak.png" class="w-100 p-3">
-          <span>Perfect Streak<br><small class="text-muted">Complete 5 perfect lessons in a row</small></span>
-          <div>0/5</div>
+        <h1>Algebra</h1>
+        <h6 class="mb-5">6 sub-topics</h6>
+        <div class="container-md">
+          <div class="accordion-body">
+            <div class="d-flex justify-content-between my-3">
+              <div class="topic-card">
+                <a class="btn w-100" style="text-align: left;" href="cartesian-graphs-and-coordinates">
+                  <b>Cartesian Graphs and Coordinates</b><br>
+                  1 topic
+                </a>
+              </div>
+              <div class="topic-card mx-4">
+                <a class="btn w-100" style="text-align: left;">
+                  <b>Factorising and Expanding</b><br>
+                  2 topics
+                </a>
+              </div>
+              <div class="topic-card">
+                <a class="btn w-100" style="text-align: left;">
+                  <b>Rearranging Formulae</b><br>
+                  0 topics
+                </a>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between my-3">
+              <div class="topic-card">
+                <a class="btn w-100" style="text-align: left;">
+                  <b>Sequences</b><br>
+                  0 topics
+                </a>
+              </div>
+              <div class="topic-card mx-4">
+                <a class="btn w-100" style="text-align: left;">
+                  <b>Simultaneous Equations</b><br>
+                  0 topics
+                </a>
+              </div>
+              <div class="topic-card">
+                <a class="btn w-100" style="text-align: left;">
+                  <b>Solving Linear Equations</b><br>
+                  0 topics
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-          <img src="/assets/achievements/icon-completionist.png" class="w-100 p-3">
-          <span>Completionist<br><small class="text-muted">Complete every lesson on the site</small></span>
-          <div>0/???</div>
-        </div>
-
-        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-          <img src="/assets/achievements/icon-perfectionist.png" class="w-100 p-3">
-          <span>Perfectionist<br><small class="text-muted">Complete every lesson on the site with a perfect
-              score</small></span>
-          <div>0/???</div>
-        </div>
-
-        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-          <span>
-            <img src="/assets/achievements/icon-speedy.png" class="w-100 p-3">
-            Speedy<br>
-            <small class="text-muted">Complete a lesson in under 5 minutes</small>
-            <div>0/1</div>
-          </span>
-        </div>
-
-        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-          <img src="/assets/achievements/icon-speed-demon.png" class="w-100 p-3">
-          <span>Speed Demon<br><small class="text-muted">Complete a lesson in under 2 minutes</small></span>
-          <div>0/1</div>
-        </div>
-
-        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-          <img src="/assets/achievements/icon-mega-speed-demon.png" class="w-100 p-3">
-          <span>Mega Speed Demon<br><small class="text-muted">Complete a lesson in under 1 minute</small></span>
-          <div>0/1</div>
-        </div>
-
-        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-          <img src="/assets/achievements/icon-grinder.png" class="w-100 p-3">
-          <span>Grinder<br><small class="text-muted">Gain 500XP in a week</small></span>
-          <div>0/500</div>
-        </div>
-
-        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-          <img src="/assets/achievements/icon-super-grinder.png" class="w-100 p-3">
-          <span>Super Grinder<br><small class="text-muted">Gain 1000XP in a week</small></span>
-          <div>0/1000</div>
-        </div>
-
-        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-          <img src="/assets/achievements/icon-omega-grinder.png" class="w-100 p-3">
-          <span>Omega Grinder<br><small class="text-muted">Gain 5000XP in a week</small></span>
-          <div>0/5000</div>
-        </div>
-      </div>
+      </section>
+    </div>
   </main>
-  <script src="/student/main.js"></script>
-  <script src="/student/script.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
 </body>
 
 </html>

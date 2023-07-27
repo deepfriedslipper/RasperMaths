@@ -7,88 +7,141 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rasper Maths</title>
 
+  <!--FAVICON-->
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+
   <!-- BOOTSTRAP ICONS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 
   <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="/RasperMaths/style.css">
+  <link rel="stylesheet" type="text/css" href="/style.css">
+
+  <!-- FLICKITY -->
+  <link rel="stylesheet" type="text/css" href="/css/flickity.css">
+  <script src="/flickity.pkgd.min.js"></script>
 
   <!-- BOOTSTRAP STYLES -->
-  <link href="/RasperMaths/css/main.min.css" rel="stylesheet">
-
-  <!-- BOOTSTRAP SCRIPTS -->
-  <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link href="/css/main.min.css" rel="stylesheet">
 
   <!-- EMAIL JS -->
   <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+
+  <!-- JQUERY -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+  <!-- BOOTSTRAP SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
   <div class="container">
-    <header class="d-flex flex-wrap justify-content-between py-3 mb-4navbar" id="home">
-      <a href="/RasperMaths/" class="d-flex align-items-center me-md-auto p-0">
-        <img src="/RasperMaths/assets/logo.svg" class="logo" alt="RasperMaths Logo">
+    <header class="d-flex flex-wrap justify-content-between py-3 mb-4 navbar" id="home"
+      style="height: 40px !important;">
+      <a href="/" class="d-flex align-items-center me-md-auto p-0">
+        <img src="/assets/logo.svg" class="logo" alt="RasperMaths Logo">
       </a>
 
       <ul class="nav nav-pills">
-        <li class="home-nav-item">
-          <a href="/RasperMaths/" class="nav-link text-bg-danger" aria-current="page">
-            Home
+        <li class="home-nav-item d-none d-lg-inline-block">
+          <a href="#faqs" class="nav-link link-danger features">
+            FAQs
           </a>
         </li>
-        <li class="home-nav-item">
+        <li class="home-nav-item d-none d-lg-inline-block">
           <a href="#features" class="nav-link link-danger features">
             Features
           </a>
         </li>
-        <li class="home-nav-item">
+        <li class="home-nav-item d-none d-lg-inline-block">
           <a href="#pricing" class="nav-link link-danger pricing">
             Pricing
           </a>
         </li>
-        <li class="home-nav-item">
+        <li class="home-nav-item d-none d-lg-inline-block">
           <a href="#contact" class="nav-link link-danger contact">
             Contact us
           </a>
         </li>
-        <a href="/RasperMaths/login/" type="button" class="btn btn-outline-danger mx-2 login">
+        <a href="/login/" type="button" class="d-none d-md-inline-block btn btn-outline-danger mx-2 login">
           Login
         </a>
-        <a type="button" class="btn btn-danger login" href="#">
+        <a type="button" class="d-none d-md-inline-block btn btn-danger login" href="#">
           Register interest
         </a>
         <button type="button"
           class="btn py-0 px-2 ms-1 d-flex align-items-center justify-content-center sidebar-toggle d-lg-none"
-          style="background-color: rgb(221, 221, 221);" onclick="toggle_menu();">
-          <img src="/RasperMaths/assets/list.svg" alt="Hamburger Menu Icon">
+          onclick="toggle_menu();">
+          <img src="/assets/list.svg" alt="Hamburger Menu Icon">
         </button>
       </ul>
     </header>
   </div>
   <main>
     <div class="position-absolute background">
-      <img src="/RasperMaths/assets/bkg.png">
+      <img src="/assets/bkg.png">
     </div>
-    <div class="container col-xxl-8 py-5">
+    <div class="container col-xxl-8 px-4 py-5 mt-5">
       <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-        <div class="col-lg-6">
-          <img src="/RasperMaths/assets/accounting-g085c3e050_1920.jpg" class="d-block mx-lg-auto img-fluid"
-            alt="Image of calculator and accounting work" width="700" height="500" loading="lazy">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img src="bootstrap-themes.png" class="d-block mx-lg-auto img-fluid" alt="Insert hero image here" width="700"
+            height="500" loading="lazy">
         </div>
         <div class="col-lg-6">
-          <h1 class="display-5 fw-bold lh-1 mb-3">Built for students, by students.</h1>
-          <p class="lead">Created by a team of students, Rasper Maths was designed to combat the current issues
-            plaguing the market of maths homework platforms, such as gimmicks,
-            high prices and other anti-consumer practices. Hence, all features are tested by a group of students, to
-            ensure enjoyment (and consequently productivity), is as high as possible.</p>
+          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
+            Built for students, by students.
+          </h1>
+          <p class="lead">
+            Created by a team of students, Rasper Maths was designed to combat the current issues plaguing the market of
+            maths homework platforms, such as gimmicks, high prices and other anti-consumer practices. Hence, all
+            features are tested by a group of students, to ensure enjoyment (and consequently productivity), is as high
+            as possible.
+          </p>
           <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-            <button type="button" class="btn btn-danger btn-lg px-4 me-md-2"
-              onclick="window.location.href = '/RasperMaths/about'">About us</button>
-            <a class="btn text-danger btn-lg">Register interest</a>
+            <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">
+              <a href="/about/" class="text-decoration-none text-white">About us</a>
+            </button>
+            <button type="button" class="btn text-danger btn-lg px-4">
+              Register interest
+            </button>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="container px-4 py-5" id="faqs">
+      <h2 class="pb-2 border-bottom">FAQs</h1>
+        <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+          <div class="card p-4 text-center w-75">
+            <h4>"What is Rasper Maths?"</h4>
+            <p>Rasper Maths is a mathematics homework and learning platform for schools created to combat the issues
+              surrounding most homework platforms these days. We understand that many schools face financial constraints
+              that prevent them from purchasing quality learning platforms that enable students to do the best they can
+              do.</p>
+          </div>
+          <div class="card p-4 text-center w-75">
+            <h4>"How much does it cost?"</h4>
+            <p>Rasper Maths is at the moment, free, but with advertisements. However, in the future we plan to implement
+              a premium adless subscription with numerous extra features which will probably cost approximately £40 a
+              month. The free version will still work and be an effective and engaging learning platform, it will simply
+              not have as many extra features.</p>
+          </div>
+          <div class="card p-4 text-center w-75">
+            <h4>"What makes Rasper Maths different from other platforms?"</h4>
+            <p>Rasper Maths is developed by a team of students which allows us to better understand the needs of
+              students and what makes an effective and engaging learning platform. It is also free - we understand the
+              financial constraints faced by many schools who may not be able to afford quality homework platforms.</p>
+          </div>
+          <div class="card p-4 text-center w-75">
+            <h4>What is RasperMaths?</h4>
+          </div>
+          <div class="card p-4 text-center w-75">
+            <h4>What is RasperMaths?</h4>
+          </div>
+        </div>
+    </div>
+
     <div class="container px-4 py-5" id="features">
       <h2 class="pb-2 border-bottom">Features</h2>
 
@@ -96,9 +149,12 @@
         <div class="col d-flex flex-column align-items-start gap-2">
           <h3 class="fw-bold">Keeping students happy to learn</h3>
           <p class="text-muted">
-            Our affordable, AI-powered learning site has a multitude of features to help students
-            of all capabilities with their learning,
-            whilst making it enjoyable.</p>
+            Our team, consisting entirely of students, has acquired valuable insights on what constitutes a good
+            learning platform and has devised solutions to address issues present in current ones. As a result, our
+            site, powered by state-of-the-art AI technology, offers a comprehensive array of features designed to
+            support students of all capabilities, while maintaining an affordable cost. The enriching and engaging
+            nature of the platform enhances the overall learning experience.
+          </p>
           <a href="features" class="btn btn-danger btn-lg">Learn more</a>
         </div>
 
@@ -107,39 +163,42 @@
             <div class="col d-flex flex-column gap-2">
               <div
                 class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-danger bg-gradient fs-4 rounded-3 feature-icon">
-                <img width="40px" src="/RasperMaths/assets/camera-video.svg" alt="Video camera icon">
+                <img width="40px" src="/assets/camera-video.svg" alt="Video camera icon">
               </div>
               <h4 class="fw-semibold mb-0">High-quality videos</h4>
-              <p class="text-muted">Fantastic educational animations that explain the concept clearly and concisely.</p>
+              <p class="text-muted">High-quality educational animations that effectively teach concepts in a
+                clear and concise manner.</p>
             </div>
 
             <div class="col d-flex flex-column gap-2">
               <div
                 class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-danger bg-gradient fs-4 rounded-3 feature-icon">
-                <img width="40px" src="/RasperMaths/assets/robot.svg" alt="Robot icon">
+                <img width="40px" src="/assets/robot.svg" alt="Robot icon">
               </div>
               <h4 class="fw-semibold mb-0">AI-powered</h4>
-              <p class="text-muted">Our 'Helpbot' is powered by GPT-3.5, one of the most powerful AI language models
-                presently.</p>
+              <p class="text-muted">Our 'Helpbot' is powered by GPT-4, a cutting-edge AI language model known for its
+                exceptional capabilities and leading-edge performance.</p>
             </div>
 
             <div class="col d-flex flex-column gap-2">
               <div
                 class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-danger bg-gradient fs-4 rounded-3 feature-icon">
-                <img width="40px" src="/RasperMaths/assets/controller.svg" alt="Game Controller Icon">
+                <img width="40px" src="/assets/controller.svg" alt="Game Controller Icon">
               </div>
               <h4 class="fw-semibold mb-0">Enjoyable</h4>
-              <p class="text-muted">The site has a game-like feel to it so students can have fun while still learning.
+              <p class="text-muted">The website features an engaging and interactive interface, providing an enjoyable
+                learning experience for students while they acquire new knowledge.
               </p>
             </div>
 
             <div class="col d-flex flex-column gap-2">
               <div
                 class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-danger bg-gradient fs-4 rounded-3 feature-icon">
-                <img width="40px" src="/RasperMaths/assets/file-earmark-person.svg" alt="File with person icon">
+                <img width="40px" src="/assets/file-earmark-person.svg" alt="File with person icon">
               </div>
               <h4 class="fw-semibold mb-0">Personalisation</h4>
-              <p class="text-muted">Students can personalise the site to reflect their mathematical capability.</p>
+              <p class="text-muted">Students have the option to customize the website to align with their individual
+                capability, allowing for a personalized learning experience.</p>
             </div>
           </div>
         </div>
@@ -151,21 +210,23 @@
           We have taken every possible measure to optimise the affordability of this service. As a small-scale
           operation comprised of a single group of friends with a common goal, we do not have to pay our
           employees. However, the creation of a platform such as this one comes with several other expenses, such as
-          the implementation of AI technology to power our "Helpbot," website hosting and domain name fees. In order
-          to generate revenue, we have integrated non-intrusive adverts, which enable us to keep this price tag as low
-          as we can.
+          the implementation of AI technology to power our "Helpbot," website hosting and domain name fees.
         </div>
         <div class="row">
-          <div class="col-lg-6 row pb-3">
-            <h1 class="col-lg-12 col-6 card-title pricing-card-title p-2">
-              £9.99<small class="text-muted fw-light">/mo</small>
+          <div class="row mb-3">
+            <h1
+              class="col-lg-8 col-12 p-2 ps-4 bg-secondary bg-opacity-10 h-100 d-flex align-items-center justify-content-between">
+              <span class="ms-3">
+                £19.99<small class="text-muted fw-light">/mo</small>
+              </span>
+              <button class="btn btn-danger d-inline-block w-auto me-5">Register interest</button>
             </h1>
-            <ul class="col-lg-12 col-6 ms-2">
+            <ul class="col-lg-4 col-12 bg-light h-100 d-flex flex-column justify-content-between p-3 ps-5"
+              style="line-height:20px;">
               <li>90-day free trial</li>
               <li>Cancel any time</li>
               <li>Subscribe for your entire school</li>
             </ul>
-            <button class="btn btn-danger d-inline-block w-auto ms-2">Register interest</button>
           </div>
         </div>
       </div>
@@ -173,16 +234,17 @@
       <div id="contact" class="mb-5">
         <h2 class="pb-2 border-bottom">Contact us</h2>
         <p class="text-muted mt-3 mb-4">
-          Our team is committed to providing the best possible experience for
-          our users so all feedback is appreciated. If you encounter any issues or have suggestions for improvement, we
-          encourage you to share them
-          with us. Please take a moment to fill out the form below and provide us with details about any bugs or
-          features you may not like. Your input will help us identify and address any areas that may require attention,
-          and ensure that our platform continues to meet the highest standards of quality and user satisfaction. Thank
-          you for your continued support in helping us improve our service.
+          Should you have any inquiries or wish to express
+          your comments, suggestions or concerns with regards
+          to the service we offer, we kindly request you to
+          make use of the form provided below. By completing the
+          form, you will enable us to better understand our customers'
+          needs and preferences, thereby allowing us to continue to
+          improve our platform and ensure that we are meeting
+          your expectations to the fullest extent possible.
         </p>
         <p class="required">Name:</p>
-        <input type="text" class="mb-3 p-1 form-control w-auto" id="name">
+        <input type="text" class="mb-3 p-1 form-control w-auto" id="name" placeholder="">
 
         <p class="required">Email:</p>
         <input type="email" class="mb-3 p-1 form-control w-auto" id="email">
@@ -212,15 +274,15 @@
 
         <p class="mt-5">Alternatively, email us at one of the addresses below:</p>
         <div class="mb-3">
-          <img src="/RasperMaths/assets/envelope.svg" class="pe-2 no-drag" alt="Envelope icon">
+          <img src="/assets/envelope.svg" class="pe-2 no-drag" alt="Envelope icon">
           enquiries@raspermaths.com
         </div>
         <div class="mb-3">
-          <img src="/RasperMaths/assets/envelope.svg" class="pe-2 no-drag" alt="Envelope icon">
+          <img src="/assets/envelope.svg" class="pe-2 no-drag" alt="Envelope icon">
           raspermaths@gmail.com
         </div>
         <div>
-          <img src="/RasperMaths/assets/envelope.svg" class="pe-2 no-drag" alt="Envelope icon">
+          <img src="/assets/envelope.svg" class="pe-2 no-drag" alt="Envelope icon">
           smellysox1business@gmail.com
         </div>
       </div>
@@ -229,13 +291,13 @@
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
           <p class="col-md-4 mb-0 text-muted">© 2023 Rasper Maths, Inc</p>
 
-          <a href="/RasperMaths/"
+          <a href="/"
             class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-            <img src="/RasperMaths/assets/logo.svg" alt="Rasper Maths Logo">
+            <img src="/assets/logo.svg" alt="Rasper Maths Logo">
           </a>
 
           <ul class="nav col-md-4 justify-content-end">
-            <li class="nav-item"><a href="#home" class="nav-link px-2 text-muted">Home</a></li>
+            <li class="nav-item"><a href="#faqs" class="nav-link px-2 text-muted">FAQs</a></li>
             <li class="nav-item"><a href="#features" class="nav-link px-2 text-muted">Features</a></li>
             <li class="nav-item"><a href="#pricing" class="nav-link px-2 text-muted">Pricing</a></li>
             <li class="nav-item"><a href="#contact" class="nav-link px-2 text-muted">Contact us</a></li>
@@ -249,20 +311,12 @@
     <div class="d-flex align-items-center link-dark text-decoration-none">
       <button onclick="toggle_menu();" class="btn d-flex justify-content-center"
         style="background-color: rgb(221, 221, 221);aspect-ratio: 1/1 !important;padding: 0.45rem;margin-right: 0.5rem;">
-        <img src="/RasperMaths/assets/x-lg.svg" alt="X icon">
+        <img src="/assets/x-lg.svg" alt="X icon">
       </button>
-      <img src="/RasperMaths/assets/logo.svg" alt="Rasper Maths Logo">
+      <img src="/assets/logo.svg" alt="Rasper Maths Logo">
     </div>
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
-      <li>
-        <a href="#" class="nav-link active" aria-current="page">
-          <svg class="bi pe-none me-2" width="16" height="16">
-            <use xlink:href="#home"></use>
-          </svg>
-          Home
-        </a>
-      </li>
       <li>
         <a href="#" class="nav-link link-dark">
           <svg class="bi pe-none me-2" width="16" height="16">
@@ -308,9 +362,6 @@
       </ul>
     </div>
   </div>
-
-  <!-- JQUERY -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
   <!-- EMAILJS SCRIPT -->
   <script src="email.js"></script>

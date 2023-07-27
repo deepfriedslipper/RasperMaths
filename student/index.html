@@ -5,16 +5,19 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | Rasper Maths</title>
+  <title>Home | Rasper Maths</title> 
+  
+  <!--FAVICON-->
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
 
   <!-- BOOTSTRAP ICONS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 
   <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="/RasperMaths/style.css">
+  <link rel="stylesheet" type="text/css" href="/style.css">
 
   <!-- BOOTSTRAP STYLES -->
-  <link href="/RasperMaths/css/main.min.css" rel="stylesheet">
+  <link href="/css/main.min.css" rel="stylesheet">
 
   <!-- BOOTSTRAP SCRIPTS -->
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
@@ -24,38 +27,33 @@
 
 <body>
   <div class="container">
-    <header class="d-flex flex-wrap justify-content-between py-3 mb-4 border-bottom">
+    <header class="d-none d-lg-flex flex-wrap justify-content-between py-3 mb-4 border-bottom">
       <div class="start nav">
-        <a href="/RasperMaths/student/" class="d-flex align-items-center">
-          <img src="/RasperMaths/assets/logo.svg" class="logo d-none d-lg-block">
-          <img src="/RasperMaths/assets/small_logo.svg" class="logo d-block d-lg-none" alt="RasperMaths Logo">
+        <a href="/student/" class="d-flex align-items-center">
+          <img src="/assets/logo.svg" class="logo d-block">
         </a>
-
-        <form class="ps-3 me-2" role="search" wtx-context="A91D5B12-3821-4D3E-994B-418D4C31C61E">
+        <form class="search-wrapper ps-3 me-2 d-inline-block" role="search"
+          wtx-context="A91D5B12-3821-4D3E-994B-418D4C31C61E">
           <input type="search" class="form-control searchbar" placeholder="Search..." aria-label="Search"
             wtx-context="A4B1769B-9402-4FE8-8B0F-6E1D5FAEFC36">
           <button class="btn btn-light border-secondary border-opacity-25 search-icon">
-            <img src="/RasperMaths/assets/search.svg">
+            <img src="/assets/search.svg">
           </button>
         </form>
         <ul class="nav list d-flex align-items-center">
-          <a href="#" class="text-decoration-none text-muted mx-2 nav-element">Lessons</a>
-          <a href="#" class="text-decoration-none text-muted mx-2 nav-element">Tasks</a>
-          <a href="#" class="text-decoration-none text-muted mx-2 nav-element">Revision</a>
+          <a href="topics" class="text-decoration-none text-black mx-2 nav-element">Lessons</a>
+          <a href="#" class="text-decoration-none text-black mx-2 nav-element">Tasks</a>
+          <a class="text-decoration-none text-muted mx-2 nav-element" style="cursor: default;">
+            Revision <small>(currently unavailable)</small>
+          </a>
         </ul>
       </div>
 
       <div class="end">
         <ul class="nav d-flex justify-content-between">
-          <div class="d-flex justify-content-center align-items-center icon-btn ps-3">
-            <button class="btn">
-              <img height="20px" width="20px" src="/RasperMaths/assets/globe2.svg" alt="Globe icon">
-            </button>
-            <div class="tooltip">Language</div>
-          </div>
           <div class="d-flex justify-content-center align-items-center pe-2 icon-btn">
             <button class="btn">
-              <img height="20px" width="20px" src="/RasperMaths/assets/bell-fill.svg" alt="Notifications icon">
+              <img height="20px" width="20px" src="/assets/bell-fill.svg" alt="Notifications icon">
             </button>
             <div class="tooltip">Notifications</div>
           </div>
@@ -73,7 +71,7 @@
                 <span>0 gold</span>
               </li>
               <li>
-                <a class="dropdown-item" href="#">Achievements</a>
+                <a class="dropdown-item" href="/student/achievements">Achievements</a>
               </li>
               <li>
                 <a class="dropdown-item" href="#">My statistics</a>
@@ -85,38 +83,181 @@
                 <a class="dropdown-item" href="#">Profile</a>
               </li>
               <li>
-                <a class="dropdown-item" href="#">Contact us</a>
+                <a class="dropdown-item" href="/contact">Contact us</a>
               </li>
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="/RasperMaths/">Sign out</a></li>
+              <li><a class="dropdown-item" href="/">Sign out</a></li>
+            </ul>
+          </div>
+        </ul>
+      </div>
+    </header>
+    <header class="d-none d-md-flex d-lg-none row py-3 mb-4 border-bottom">
+      <div class="nav col-4">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <img src="/assets/list.svg">
+        </button>
+      </div>
+
+      <div class="nav col-4">
+        <a href="/student/" class="d-flex align-items-center">
+          <img src="/assets/logo.svg" class="logo d-block" alt="RasperMaths Logo">
+        </a>
+      </div>
+
+      <div class="col-4">
+        <ul class="nav">
+          <div class="end d-flex justify-content-center align-items-center pe-2 icon-btn">
+            <button class="btn">
+              <img height="20px" width="20px" src="/assets/bell-fill.svg" alt="Notifications icon">
+            </button>
+            <div class="tooltip">Notifications</div>
+          </div>
+          <div class="end dropdown">
+            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <img src="https://github.com/mdo.png" alt="Loading..." width="40" height="40" class="rounded-circle">
+            </a>
+            <ul class="dropdown-menu text-small">
+              <li class="px-3">
+                <h6 class="m-0 name">Loading...</h6>
+              </li>
+              <li class="px-3 d-flex pb-3">
+                <span class="pe-2">0 XP</span>
+                <span>0 gold</span>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/student/achievements">Achievements</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">My statistics</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Settings</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Profile</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/contact">Contact us</a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="/">Sign out</a></li>
             </ul>
           </div>
         </ul>
       </div>
 
     </header>
+    <header class="d-flex d-md-none flex-wrap justify-content-between py-3 mb-4 border-bottom">
+      <div class="start nav" style="flex-basis: 33% !important;">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <img src="/assets/list.svg">
+        </button>
+      </div>
+
+      <div class="nav" style="flex-basis: 33% !important;">
+        <a href="/student/" class="d-flex align-items-center">
+          <img src="/assets/small_logo.svg" class="logo d-block" alt="RasperMaths Logo">
+        </a>
+      </div>
+
+      <div class="nav" style="flex-basis: 33% !important;">
+        <ul class="nav d-inline-flex justify-content-end">
+          <div class="d-flex justify-content-center align-items-center icon-btn">
+            <button class="btn">
+              <img height="20px" width="20px" src="/assets/bell-fill.svg" alt="Notifications icon">
+            </button>
+            <div class="tooltip">Notifications</div>
+          </div>
+        </ul>
+        <div class="dropdown d-inline-block">
+          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <img src="https://github.com/mdo.png" alt="Loading..." width="40" height="40" class="rounded-circle">
+          </a>
+          <ul class="dropdown-menu text-small">
+            <li class="px-3">
+              <h6 class="m-0 name">Loading...</h6>
+            </li>
+            <li class="px-3 d-flex pb-3">
+              <span class="pe-2">0 XP</span>
+              <span>0 gold</span>
+            </li>
+            <li>
+              <a class="dropdown-item" href="/student/achievements">Achievements</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">My statistics</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Settings</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Profile</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="/contact">Contact us</a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="/">Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </header>
   </div>
+  <nav>
+    <div class="collapse" id="navbarToggleExternalContent">
+      <div class="container pb-4">
+        <h5 class="text-black h4 mb-3">Menu</h5>
+
+        <form>
+          <input class="w-100 form-control mb-4" placeholder="Search...">
+        </form>
+        <ul class="list-unstyled mb-3">
+          <hr>
+          <li><a class="text-black text-decoration-none" href="topics">Lessons</a></li>
+          <hr>
+          <li><a class="text-black text-decoration-none" href="#">Tasks</a></li>
+          <hr>
+          <li><a class="text-muted text-decoration-none">Revision <small>(currently unavailable)</small></a></li>
+          <hr>
+        </ul>
+      </div>
+    </div>
+  </nav>
   <main>
     <div class="container">
-      <h1>Welcome, Rafi.</h1>
+      <h1>Welcome, [name].</h1>
       <div class="row pt-5 pb-2">
-        <a class="btn col-lg-4 d-flex align-items-center justify-content-center border-end border-2">
-          <img src="/RasperMaths/assets/1-square.svg" class="p-3"
+        <a
+          class="btn col-4 d-flex align-items-center justify-content-center border-end border-2 flex-lg-row flex-column">
+          <img src="/assets/1-square.svg" class="p-3"
             style="-webkit-user-drag:none;-moz-user-select:none;user-select:none;-webkit-user-select:none;-ms-user-select:none;">
           <div class="px-3" style="text-align:left">
             <h4 class="m-0">Level 1</h4>
             <span style="font-size:large;">0 XP</span>
           </div>
         </a>
-        <a class="btn col-lg-4 d-flex align-items-center justify-content-center border-end border-2">
-          <img src="/RasperMaths/assets/piggy-bank.svg" class="p-3"
+        <a
+          class="btn col-4 d-flex align-items-center justify-content-center border-end border-2 flex-lg-row flex-column">
+          <img src="/assets/piggy-bank.svg" class="p-3"
             style="-webkit-user-drag:none;-moz-user-select:none;user-select:none;-webkit-user-select:none;-ms-user-select:none;">
           <span style="font-size:large;" class="p-3">0 Gold</span>
         </a>
-        <a class="btn col-lg-4 d-flex align-items-center justify-content-center">
-          <img src="/RasperMaths/assets/trophy.svg" class="p-3 no-drag">
+        <a class="btn col-4 d-flex align-items-center justify-content-center flex-lg-row flex-column">
+          <img src="/assets/trophy.svg" class="p-3 no-drag">
           <span style="font-size:large;" class="p-3">0 Achievements unlocked</span>
         </a>
       </div>
@@ -126,20 +267,24 @@
         <div class="container">
           <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
 
-            <div class="card d-inline-block m-2">
-              <div class="card-body">
-                <h5 class="card-title fw-semibold">9Y1 <small class="fw-normal">32 students</small></h5>
-                <p class="text-muted">C Davies, W Whitmore</p>
-                <button class="btn btn-danger mt-4 me-1">View</button>
+            <div class="card-wrapper d-inline-block p-1" style="height: 175px !important;">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title fw-semibold">9Y1 <small class="fw-normal">32 students</small></h5>
+                  <p class="text-muted">C Davies, W Whitmore</p>
+                  <button class="btn btn-danger mt-4 me-1">View</button>
+                </div>
               </div>
             </div>
 
-            <div class="card d-inline-flex m-2" style="background: #ffe5e5;">
-              <div class="card-body d-flex justify-content-center align-items-center flex-column">
-                <button class="btn btn-danger" style="border-radius: 50%;aspect-ratio: 1;">
-                  <img src="/RasperMaths/assets/plus.svg">
-                </button>
-                <span>Join class</span>
+            <div class="card-wrapper d-inline-block p-1" style="height: 175px !important;">
+              <div class="card h-100" style="background: #ffe5e5;">
+                <div class="card-body d-flex justify-content-center align-items-center flex-column">
+                  <button class="btn btn-danger" style="border-radius: 50%;aspect-ratio: 1;">
+                    <img src="/assets/plus.svg">
+                  </button>
+                  <span>Join class</span>
+                </div>
               </div>
             </div>
           </div>
@@ -149,7 +294,7 @@
       </div>
 
       <div class="row border" style="border-radius: 2rem;">
-        <div class="p-4 col-6" style="border-right: 1px rgb(226, 226, 226) solid;">
+        <div class="p-4 col-12 col-lg-6" style="border-right: 1px rgb(226, 226, 226) solid;">
           <h3 class="pb-2">Tasks</h3>
           <div class="accordion" id="tasks">
             <div class="accordion-item">
@@ -194,7 +339,7 @@
             </div>
           </div>
         </div>
-        <div class="p-4 col-6 h-auto">
+        <div class="p-4 col-12 col-lg-6 h-auto tests">
           <h3 class="pb-2">Upcoming tests</h3>
           <div class="accordion" id="tests">
             <div class="accordion-item">
@@ -217,11 +362,11 @@
           </div>
         </div>
       </div>
-
+      <br>
     </div>
   </main>
-  <script src="/RasperMaths/student/main.js"></script>
-  <script src="/RasperMaths/student/script.js"></script>
+  <script src="/student/main.js"></script>
+  <script src="/student/script.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </body>
 

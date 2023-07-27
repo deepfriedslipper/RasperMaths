@@ -4,9 +4,7 @@ TRANSLATION
 
 Hello, and welcome back to Rasper Maths. I'm Mr Goddard and in this video we're going to be talking about Translation, which is part of the Transformations topic.
 
-Welcome to this educational animation on translation in math. Translation is an important concept in geometry and is used in many real-world applications.
-
-Translation is the process of moving a shape or an object from one place to another in a straight line, without changing its size, shape, or orientation.
+Translation is an important concept in geometry and is used in many real-world applications. It is essentially the process of moving a shape or an object from one place to another in a straight line, without changing its size, shape, or orientation.
 
 To translate an object, you need to follow a few simple steps. First, choose a distance and a direction. This will determine how far and in which direction you need to move the object.
 
